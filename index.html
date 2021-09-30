@@ -27,9 +27,33 @@
 </head>
 
 <body>
-
+  <div class="hero-img" id="parallax"></div>
+  <div class="hero-bg"></div>
   <!-- Add your site or application content here -->
-  <div class="hero">Parsons Projects</div>
+  <div class="hero-text">Parsons Projects</div>
+
+  <script>
+    (function() {
+      // Add event listener
+      document.addEventListener("mousemove", parallax);
+      const heroText = document.querySelector(".hero-text");
+      const heroBg = document.querySelector(".hero-bg");
+      const heroImg = document.querySelector(".hero-img");
+      // Magic happens here
+      function parallax(e) {
+        let _w = window.innerWidth/2;
+        let _h = window.innerHeight/2;
+        let _mouseX = e.clientX;
+        let _mouseY = e.clientY;
+        let _depth1 = `${(_mouseX - _w) * 0.01}px, ${(_mouseY - _h) * 0.01}px`;
+        let _depth2 = `${50 - (_mouseX - _w) * 0.06}px, ${50 - (_mouseY - _h) * 0.06}px`;
+        let _depth3 = `${50 - (_mouseX - _w) * 0.1}% ${50 - (_mouseY - _h) * 0.1}%`;
+        heroText.style.transform = `translate(${_depth1})`;
+        heroBg.style.transform = `translate(${_depth2}) scale(1.5)`;
+        heroImg.style.backgroundPosition = _depth3;
+      }
+    })();
+  </script>
 </body>
 
 </html>
