@@ -1,0 +1,28 @@
+# Parsons Projects
+
+> Personal site of Alan Parsons, Technical Director at Craftsman+ and a software developer since 2009, who also makes games, developer tools and small web apps. Based in Folkestone, UK. Not to be confused with the musician Alan Parsons or The Alan Parsons Project.
+
+The site is a single page at https://parsonsprojects.github.io/ that zooms from the observable universe down to a single pixel, with Alan's projects placed along the way. The same information is listed plainly at the bottom of the page, followed by his work history. A full CV is at https://parsonsprojects.github.io/cv.html (PDF: https://parsonsprojects.github.io/cv.pdf).
+
+## Work
+
+- Technical Director at Craftsman+ (March 2026 – now): technical direction of a creative and playable ad platform. Led real-time multiplayer editing (PLAY v5.4), the platform's AI layer and generation pipelines, an MCP server for AI agents, and credit-based usage and licensing.
+- Software Solutions Architect at Craftsman+ (January 2022 – March 2026): set up the original serverless platform on AWS and the HTML5 playable ad export pipeline for ad networks, and led and helped implement the playable analytics stack, which tracked nearly 3 billion ad sessions and over 110 million click-throughs between October 2025 and September 2026. Microservices, event-driven systems, TypeScript, CI/CD and test-driven development.
+- Lead CSS / Frontend Developer at GForces, Maidstone (September 2011 – January 2022): building interfaces and leading the frontend team.
+- Graphics & Web Designer at SiteWizard.co.uk (May 2010 – September 2011) and 1businesssystem (2009 – 2010).
+- Education: BA Architecture, University for the Creative Arts (2006 – 2009).
+
+## Projects
+
+- [Puzzles & Mortar](https://puzzlesandmortar.com): Free browser game of maths and word puzzles. Every puzzle solved earns a building for a city you plan yourself. Made with 5 to 13 year olds in mind, but anyone can play. No accounts and no adverts. Live, in development since 2022.
+- [Grove Bench](https://github.com/ParsonsProjects/grove-bench): Open-source Windows app for running several Claude Code sessions at once, each in its own git worktree and terminal.
+- [Deep Keep](https://playdeepkeep.com/): Free tactical roguelite in the browser with no hidden dice. Every swing is rolled up front and shown, so each fight is a full-information puzzle. A run takes about ten minutes.
+- Deep Dungeon: A text adventure where you type anything; a rules engine decides what happens and a language model describes it. In progress.
+- [Tarsier](https://github.com/ParsonsProjects/Tarsier): One of Alan's early side projects, from 2016. An open-source Chrome extension that rolled the best Trello extensions into one, built with Mithril.js.
+- [Fluid Gallery](https://github.com/ParsonsProjects/fluidgallery): Alan's first public project, from 2015. An open-source jQuery lightbox plugin based on Fluidbox, with galleries, titles and support back to Internet Explorer 8. [Demo](https://parsonsprojects.github.io/fluidgallery/).
+
+## Links
+
+- [CV](https://parsonsprojects.github.io/cv.html)
+- [LinkedIn](https://www.linkedin.com/in/alan-parsons-474b2913)
+- [GitHub](https://github.com/ParsonsProjects)
