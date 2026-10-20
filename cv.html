@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alan Parsons · CV · Technical Director</title>
+  <meta name="description" content="CV of Alan Parsons, Technical Director at Craftsman+: solutions architect with a frontend background, building for the web since 2009.">
+  <link rel="canonical" href="https://parsonsprojects.github.io/cv.html">
+  <link rel="icon" type="image/png" href="icon.png">
+  <meta name="author" content="Alan Parsons">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Alan Parsons · CV">
+  <meta property="og:url" content="https://parsonsprojects.github.io/cv.html">
+  <meta property="og:image" content="https://parsonsprojects.github.io/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <!-- cv.pdf is printed from this page: see scripts/build-cv-pdf.sh. -->
+  <style>
+    :root { --ink: #16181d; --dim: #555b66; --line: #dde0e5; --accent: #b7791f; }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #eef0f3;
+      color: var(--ink);
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    .toolbar { max-width: 210mm; margin: 1.5rem auto .75rem; display: flex; justify-content: space-between; gap: 1rem; padding: 0 1rem; font-size: .9rem; }
+    .toolbar .download { background: var(--ink); color: #fff; text-decoration: none; padding: .45rem 1rem; border-radius: 999px; }
+
+    .page {
+      max-width: 210mm;
+      margin: 0 auto 2rem;
+      background: #fff;
+      padding: 16mm 18mm;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, .08);
+    }
+
+    header { display: flex; justify-content: space-between; gap: 2rem; align-items: flex-end; border-bottom: 2px solid var(--ink); padding-bottom: 1rem; }
+    h1 { font-size: 2.4rem; font-weight: 800; line-height: 1; margin: 0 0 .35rem; }
+    .role { margin: 0; font-size: 1.1rem; color: var(--dim); }
+    .contact { list-style: none; margin: 0; padding: 0; text-align: right; font-size: .85rem; color: var(--dim); }
+    .contact a { text-decoration: none; }
+
+    h2 { font-size: .8rem; font-weight: 700; text-transform: uppercase; color: var(--accent); margin: 1.6rem 0 .6rem; }
+    p { margin: 0 0 .5rem; }
+
+    .jobs { list-style: none; margin: 0; padding: 0; }
+    .jobs > li { display: grid; grid-template-columns: 9.5rem 1fr; gap: 1rem; padding: .6rem 0; border-top: 1px solid var(--line); break-inside: avoid; }
+    .jobs > li:first-child { border-top: 0; }
+    .when { font-family: 'JetBrains Mono', monospace; font-size: .75rem; color: var(--dim); padding-top: .2rem; }
+    /* A little extra word spacing so text extractors see the gaps in bold headings ("Earlierroles"). */
+    .jobs h3 { font-size: 1rem; margin: 0; word-spacing: .08em; }
+    .jobs .org { color: var(--dim); font-weight: 400; }
+    .jobs p { margin: .2rem 0 0; color: var(--dim); }
+    .wins { margin: .35rem 0 0; padding-left: 1.1rem; color: var(--dim); }
+    .wins li { padding: .1rem 0; }
+
+    .skills { display: grid; grid-template-columns: 9.5rem 1fr; gap: .35rem 1rem; margin: 0; }
+    .skills dt { font-weight: 600; }
+    .skills dd { margin: 0; color: var(--dim); }
+
+    .projects { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 1.5rem; }
+    .projects li { break-inside: avoid; margin-bottom: .5rem; }
+    .projects strong { display: block; }
+    .projects span { color: var(--dim); font-size: .9rem; }
+
+    @media (max-width: 640px) {
+      .page { padding: 1.5rem 1.1rem; }
+      header { flex-direction: column; align-items: flex-start; }
+      .contact { text-align: left; }
+      .jobs > li, .skills { grid-template-columns: 1fr; gap: .2rem; }
+      .projects { columns: 1; }
+    }
+
+    @page { size: A4; margin: 12mm 14mm; }
+
+    @media print {
+      body { background: #fff; font-size: 10pt; line-height: 1.4; }
+      h2 { margin: 1.1rem 0 .4rem; }
+      .jobs > li { padding: .4rem 0; }
+      header { padding-bottom: .7rem; }
+      .toolbar { display: none; }
+      .page { box-shadow: none; padding: 0; max-width: none; margin: 0; }
+      a { text-decoration: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { * { transition: none; } }
+  </style>
+</head>
+
+<body>
+  <div class="toolbar">
+    <a href="https://parsonsprojects.github.io/">← parsonsprojects.github.io</a>
+    <a class="download" href="cv.pdf" download>Download PDF</a>
+  </div>
+
+  <main class="page">
+    <header>
+      <div>
+        <h1>Alan Parsons</h1>
+        <p class="role">Technical Director at Craftsman+</p>
+      </div>
+      <ul class="contact">
+        <li>Folkestone, England, UK</li>
+        <li><a href="mailto:parsonsprojects@outlook.com">parsonsprojects@outlook.com</a></li>
+        <li><a href="https://www.linkedin.com/in/alan-parsons-474b2913">linkedin.com/in/alan-parsons-474b2913</a></li>
+        <li><a href="https://github.com/ParsonsProjects">github.com/ParsonsProjects</a></li>
+        <li><a href="https://parsonsprojects.github.io/">parsonsprojects.github.io</a></li>
+      </ul>
+    </header>
+
+    <section>
+      <h2>Summary</h2>
+      <p>Solutions architect with a frontend background, building for the web since 2009, from pixel-pushing to system
+        design. I started in design and frontend development and spent over a decade building interfaces and leading
+        frontend teams, so I approach architecture with a strong understanding of what developers need to ship good
+        work. Now I focus on technical architecture, microservices and event-driven systems. TypeScript is my main
+        language, and I've shipped production apps in React, Vue and Svelte.</p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <ol class="jobs">
+        <li>
+          <span class="when">Mar 2026 – now</span>
+          <div>
+            <h3>Technical Director<span class="org"> · Craftsman+</span></h3>
+            <p>Leading the technical direction and architecture of the company's creative and playable ad platform.
+              Monthly active customer users of its Studio grew by about 40% over the past year.</p>
+            <ul class="wins">
+              <li>Led real-time multiplayer editing for the PLAY editor, shipped in PLAY v5.4: scenes split into
+                per-object records, a sync backend with room permissions, and live cursors, selection and presence.</li>
+              <li>Built the AI layer across the platform: model calls routed through Cloudflare AI Gateway and Amazon
+                Bedrock with provider fallback, AI video and asset generation pipelines, and a chat assistant inside the
+                editor that customers have used for over 14,000 requests and 85,000 tool calls since it launched in early
+                2026.</li>
+              <li>Opened the platform to AI agents with an MCP server, OAuth consent flow and delegated tokens, so
+                assistants such as ChatGPT can work inside a company's permissions.</li>
+              <li>Designed credit-based usage limits, licences and seat management, with per-user usage tracking and
+                billing.</li>
+              <li>Made the platform faster and cheaper to run: lower asset pipeline latency, streamed exports, bounded
+                concurrency and cold-start profiling.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <span class="when">Jan 2022 – Mar 2026</span>
+          <div>
+            <h3>Software Solutions Architect<span class="org"> · Craftsman+</span></h3>
+            <p>Designed the technical architecture: microservices, event-driven systems, TypeScript throughout, on AWS
+              with CI/CD and test-driven development.</p>
+            <ul class="wins">
+              <li>Set up the original serverless platform in 2022: the API, Vue frontend, canvas library and AWS
+                infrastructure as code.</li>
+              <li>Built the export pipeline that turns creatives into HTML5 playable ads tailored to each ad network,
+                with direct upload integrations.</li>
+              <li>Led and helped implement the playable analytics stack, from in-ad event tracking through ingestion to real-time
+                dashboards of engagement and scene paths. In the year to September 2026 it tracked nearly 3 billion ad
+                sessions and over 110 million click-throughs, with peak months above 450 million sessions.</li>
+              <li>Shipped core Studio features, including the asset library, asset
+                optimisation, folders and search, and enterprise single sign-on.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <span class="when">Sep 2011 – Jan 2022</span>
+          <div>
+            <h3>Lead CSS / Frontend Developer<span class="org"> · GForces, Maidstone</span></h3>
+            <p>Over ten years building interfaces and leading the frontend team.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2009 – Sep 2011</span>
+          <div>
+            <h3>Earlier roles</h3>
+            <p>Graphics &amp; Web Designer at SiteWizard.co.uk (May 2010 – Sep 2011) and 1businesssystem (2009 – 2010).</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt>
+        <dd>TypeScript, JavaScript, HTML, CSS</dd>
+        <dt>Frameworks</dt>
+        <dd>React, Vue, Svelte, Node.js</dd>
+        <dt>Architecture</dt>
+        <dd>Microservices, event-driven systems, AWS</dd>
+        <dt>Delivery</dt>
+        <dd>CI/CD, TDD, end-to-end testing, Jira, Confluence</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Side projects</h2>
+      <ul class="projects">
+        <li><strong>Puzzles &amp; Mortar</strong><span>Free maths and word puzzle game where solved puzzles build a city. puzzlesandmortar.com</span></li>
+        <li><strong>Deep Keep</strong><span>Free tactical roguelite in the browser with no hidden dice. playdeepkeep.com</span></li>
+        <li><strong>Grove Bench</strong><span>Open-source Windows app for running several Claude Code sessions side by side in git worktrees.</span></li>
+        <li><strong>Fluid Gallery</strong><span>Open-source jQuery lightbox plugin, my first public project (2015).</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ol class="jobs">
+        <li>
+          <span class="when">2006 – 2009</span>
+          <div>
+            <h3>BA Architecture<span class="org"> · University for the Creative Arts</span></h3>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+</body>
+
+</html>

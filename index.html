@@ -1,57 +1,1568 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en-GB">
 
 <head>
   <meta charset="utf-8">
-  <title>Parsons Projects</title>
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
-  <!-- <link rel="manifest" href="site.webmanifest"> -->
+  <title>Alan Parsons, software developer · Parsons Projects</title>
+  <meta name="description" content="Alan Parsons is Technical Director at Craftsman+ and makes games, developer tools and small web apps, including Puzzles &amp; Mortar and Deep Keep.">
+  <link rel="canonical" href="https://parsonsprojects.github.io/">
+  <link rel="icon" type="image/png" href="icon.png">
   <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+  <meta name="theme-color" content="#04050b">
+  <meta name="author" content="Alan Parsons">
 
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Parsons Projects">
+  <meta property="og:title" content="Alan Parsons, software developer">
+  <meta property="og:description" content="Games, developer tools and small web apps, on a zoom from the edge of the universe down to a single pixel.">
+  <meta property="og:url" content="https://parsonsprojects.github.io/">
+  <meta property="og:image" content="https://parsonsprojects.github.io/icon.png">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Who this site is about, for search and answer engines. Kept to projects that are public. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://parsonsprojects.github.io/#website",
+        "url": "https://parsonsprojects.github.io/",
+        "name": "Parsons Projects",
+        "inLanguage": "en-GB",
+        "publisher": { "@id": "https://parsonsprojects.github.io/#alan" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://parsonsprojects.github.io/#profile",
+        "url": "https://parsonsprojects.github.io/",
+        "name": "Alan Parsons, software developer",
+        "isPartOf": { "@id": "https://parsonsprojects.github.io/#website" },
+        "mainEntity": { "@id": "https://parsonsprojects.github.io/#alan" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://parsonsprojects.github.io/#alan",
+        "name": "Alan Parsons",
+        "jobTitle": "Technical Director",
+        "worksFor": { "@type": "Organization", "name": "Craftsman+" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "University for the Creative Arts" },
+        "homeLocation": { "@type": "Place", "name": "Folkestone, England, United Kingdom" },
+        "description": "Technical Director at Craftsman+ and a software developer since 2009, who also makes games, developer tools and small web apps.",
+        "disambiguatingDescription": "Software developer and Technical Director behind Parsons Projects; not the musician Alan Parsons of The Alan Parsons Project.",
+        "url": "https://parsonsprojects.github.io/",
+        "email": "mailto:parsonsprojects@outlook.com",
+        "sameAs": ["https://github.com/ParsonsProjects", "https://www.linkedin.com/in/alan-parsons-474b2913"],
+        "knowsAbout": ["TypeScript", "React", "Vue", "Svelte", "AWS", "Microservices", "Event-driven architecture", "CI/CD", "Test-driven development", "Game design", "AI coding agents"]
+      },
+      {
+        "@type": "VideoGame",
+        "name": "Puzzles & Mortar",
+        "url": "https://puzzlesandmortar.com",
+        "description": "Free browser game of maths and word puzzles. Each one solved earns a building for a city you plan yourself. Made with 5 to 13 year olds in mind, but anyone can play. No accounts and no adverts.",
+        "gamePlatform": "Web browser",
+        "isAccessibleForFree": true,
+        "audience": { "@type": "PeopleAudience", "suggestedMinAge": 5 },
+        "author": { "@id": "https://parsonsprojects.github.io/#alan" }
+      },
+      {
+        "@type": "VideoGame",
+        "name": "Deep Keep",
+        "url": "https://playdeepkeep.com/",
+        "description": "Free deterministic tactical roguelite played in the browser. Every swing is rolled up front and shown, so each fight is a full-information puzzle. A run takes about ten minutes.",
+        "genre": ["Roguelite", "Tactics"],
+        "gamePlatform": "Web browser",
+        "isAccessibleForFree": true,
+        "author": { "@id": "https://parsonsprojects.github.io/#alan" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Grove Bench",
+        "url": "https://github.com/ParsonsProjects/grove-bench",
+        "description": "Windows desktop app for running several Claude Code sessions at once, each in its own git worktree and terminal.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Windows",
+        "isAccessibleForFree": true,
+        "author": { "@id": "https://parsonsprojects.github.io/#alan" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Tarsier",
+        "url": "https://github.com/ParsonsProjects/Tarsier",
+        "description": "Chrome extension from 2016 that rolled the best Trello extensions into one. Built with Mithril.js and the Trello API.",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome",
+        "isAccessibleForFree": true,
+        "dateCreated": "2016-07-08",
+        "author": { "@id": "https://parsonsprojects.github.io/#alan" }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "Fluid Gallery",
+        "url": "https://parsonsprojects.github.io/fluidgallery/",
+        "codeRepository": "https://github.com/ParsonsProjects/fluidgallery",
+        "description": "jQuery lightbox plugin based on Fluidbox, with galleries, titles and support back to Internet Explorer 8. Alan's first public project.",
+        "programmingLanguage": "JavaScript",
+        "license": "https://opensource.org/licenses/MIT",
+        "dateCreated": "2015-04-11",
+        "author": { "@id": "https://parsonsprojects.github.io/#alan" }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #f2f4ff;
+      --dim: #b4b9d6;
+      --accent: #ffd36b;
+      --glass: rgba(10, 12, 24, .62);
+      --line: rgba(255, 255, 255, .14);
+    }
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+    * { box-sizing: border-box; }
 
-  <meta name="theme-color" content="#fafafa">
+    body {
+      margin: 0;
+      background: #04050b;
+      color: var(--ink);
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      line-height: 1.55;
+    }
+
+    a { color: var(--accent); }
+
+    /* ---------- Top bar ---------- */
+    .topbar {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      right: 1rem;
+      z-index: 30;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+    }
+    .topbar > * { pointer-events: auto; }
+    .brand, nav {
+      background: var(--glass);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+      border-radius: 999px;
+      padding: .5rem 1rem;
+    }
+    .brand { font-weight: 800; letter-spacing: -.01em; color: var(--ink); text-decoration: none; }
+    nav { display: flex; gap: .25rem; padding: .3rem; }
+    nav a { color: var(--ink); text-decoration: none; padding: .3rem .8rem; border-radius: 999px; font-size: .92rem; }
+    nav a:hover, nav a:focus-visible { background: rgba(255, 255, 255, .12); }
+
+    /* ---------- Levels (static layout: no JS or reduced motion) ---------- */
+    .stage { padding-top: 5rem; }
+
+    .level {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .art {
+      aspect-ratio: 1;
+      position: relative;
+      /* Soft square edges, so a level blends into the frame it sits in. */
+      --feather: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent), linear-gradient(transparent, #000 4%, #000 96%, transparent);
+    }
+    .art > img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      -webkit-mask: var(--feather);
+      -webkit-mask-composite: source-in;
+      mask: var(--feather);
+      mask-composite: intersect;
+    }
+
+    /* While zooming, each level's picture is painted onto a screen-sized canvas instead (see render()). */
+    .pic { display: none; }
+    .zoom .pic { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
+    .zoom .art > img { display: none; }
+
+    /* ---------- Art animation layer ---------- */
+    .fx { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .fx i, .fx b { position: absolute; display: block; }
+    .fx img { width: 100%; height: 100%; display: block; }
+    .zoom .art:not(.live) .fx * { animation-play-state: paused; }
+
+    .tw { border-radius: 50%; background: #fff; box-shadow: 0 0 6px 1px rgba(255, 255, 255, .7); animation: twinkle 3s ease-in-out infinite; }
+    .glow { border-radius: 50%; background: radial-gradient(closest-side, var(--c), transparent); }
+    .drift { animation: drift 40s ease-in-out infinite alternate; }
+    .pulse { animation: pulse 6s ease-in-out infinite; }
+
+    .orbit { border-radius: 50%; transform: rotate(var(--a)); animation: spin 60s linear infinite; }
+    .orbit b { left: 100%; top: 50%; translate: -50% -50%; border-radius: 50%; box-shadow: 0 0 6px rgba(255, 255, 255, .25); }
+    .orbit b.ringed::after { content: ""; position: absolute; inset: -12% -75%; border: 1px solid rgba(230, 209, 153, .75); border-radius: 50%; transform: scaleY(.35); }
+
+    .globe { border-radius: 50%; overflow: hidden; }
+    .cloud-strip { left: 0; top: 0; width: 200%; height: 100%; background-size: 50% 100%; background-repeat: repeat-x; animation: slide-half 140s linear infinite; }
+    .shade { inset: 0; background: radial-gradient(circle at 30% 28%, transparent 46%, rgba(0, 0, 0, .65) 86%); }
+
+    .lane-x { left: 0; width: 100%; animation: lane-x 20s linear infinite; }
+    .lane-x b { right: 0; top: 0; height: 100%; border-radius: 2px; }
+    .lane-y { top: 0; height: 100%; animation: lane-y 20s linear infinite; }
+    .lane-y b { bottom: 0; left: 0; width: 100%; border-radius: 2px; }
+
+    .flag { background: #c0392b; transform-origin: left center; animation: wave 1.8s ease-in-out infinite; border-radius: 0 2px 2px 0; }
+    .shimmer { background: rgba(255, 255, 255, .7); border-radius: 2px; animation: twinkle 3s ease-in-out infinite; }
+    .cloud-shadow { right: 0; top: 0; height: 100%; border-radius: 50%; background: radial-gradient(closest-side, rgba(20, 35, 10, .22), transparent); }
+
+    .sway { transform-origin: 50% 50%; animation: sway 7s ease-in-out infinite alternate; }
+    .steam { border-radius: 50%; background: rgba(255, 255, 255, .45); filter: blur(6px); animation: rise 4s ease-out infinite; }
+    .typeline { transform-origin: left center; border-radius: 3px; animation: type 3.5s steps(14) infinite; }
+    .caret { animation: blink 1s steps(1) infinite; }
+    .pulse-dot { border-radius: 50%; background: #3fb950; box-shadow: 0 0 8px #3fb950; animation: pulse 2s ease-in-out infinite; --lo: .35; }
+
+    .scan { background: linear-gradient(transparent, rgba(255, 255, 255, .09), transparent); }
+    .btn-flash { border-radius: 80px; background: rgba(0, 0, 0, .18); opacity: 0; animation: flash 3s ease-out infinite; }
+    .ripple { border: 3px solid rgba(255, 255, 255, .8); border-radius: 50%; opacity: 0; animation: ripple 3s ease-out infinite; }
+    .press { transform-origin: 8% 6%; animation: press 3s ease-out infinite; }
+
+    @keyframes twinkle { 0%, 100% { opacity: .15; } 50% { opacity: 1; } }
+    @keyframes pulse { 0%, 100% { opacity: var(--lo, .55); } 50% { opacity: 1; } }
+    @keyframes drift { to { transform: translate(6%, -4%) scale(1.08); } }
+    @keyframes spin { from { transform: rotate(var(--a)); } to { transform: rotate(calc(var(--a) + 360deg)); } }
+    @keyframes slide-half { to { transform: translateX(-50%); } }
+    @keyframes lane-x { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+    @keyframes lane-y { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+    @keyframes wave { 0%, 100% { transform: scaleX(1) skewY(0deg); } 50% { transform: scaleX(.8) skewY(8deg); } }
+    @keyframes sway { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+    @keyframes rise { 0% { transform: translateY(0) scale(.6); opacity: 0; } 30% { opacity: .7; } 100% { transform: translateY(-150%) scale(1.5); opacity: 0; } }
+    @keyframes type { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes flash { 0%, 78% { opacity: 0; } 84% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes ripple { 0%, 80% { opacity: 0; transform: scale(.3); } 82% { opacity: 1; } 100% { opacity: 0; transform: scale(2.4); } }
+    @keyframes press { 0%, 78%, 92%, 100% { transform: scale(1); } 84% { transform: scale(.88); } }
+
+    .caption {
+      background: var(--glass);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+      border-radius: 20px;
+      padding: 1.6rem 1.75rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+    }
+
+    .power { font-family: 'JetBrains Mono', monospace; font-size: .8rem; color: var(--accent); margin: 0; letter-spacing: .04em; }
+    .caption h1, .caption h2 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); line-height: 1.02; letter-spacing: -.025em; margin: .4rem 0 .75rem; font-weight: 800; }
+    .caption h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
+    .caption p { color: var(--dim); margin: 0 0 .75rem; }
+    .caption p:last-child { margin-bottom: 0; }
+    .caption strong { color: var(--ink); font-weight: 700; }
+
+    .projects { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: .75rem; }
+    .projects li { border-top: 1px solid var(--line); padding-top: .75rem; }
+    .projects h3 { margin: 0; font-size: 1.05rem; }
+    .projects p { margin: .15rem 0 .25rem; font-size: .95rem; }
+    .projects .tag { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--dim); letter-spacing: .06em; text-transform: uppercase; }
+
+    .cta { display: inline-block; margin-top: .5rem; background: var(--accent); color: #1a1405; font-weight: 800; text-decoration: none; padding: .8rem 1.5rem; border-radius: 999px; }
+
+    .hint { font-family: 'JetBrains Mono', monospace; font-size: .8rem; color: var(--dim); }
+
+    /* ---------- HUD ---------- */
+    .hud { display: none; }
+
+    /* ---------- Zoom mode (JS on, motion allowed) ---------- */
+    .zoom { scroll-snap-type: y proximity; }
+    .zoom .stage {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      height: 100svh;
+      overflow: hidden;
+      padding: 0;
+      background: var(--stage-bg, #04050b);
+      transition: background-color .8s ease;
+    }
+    .zoom .level { position: absolute; inset: 0; display: block; max-width: none; padding: 0; margin: 0; pointer-events: none; }
+    .zoom .art {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: var(--V);
+      height: var(--V);
+      margin: calc(var(--V) / -2) 0 0 calc(var(--V) / -2);
+      /* Now only holds the animation layer, which is only shown near natural size (FX_RANGE), so it never gets huge. */
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+      contain: strict;
+      opacity: 0;
+    }
+
+    .frames { display: none; }
+    .zoom .frames { display: block; position: absolute; inset: 0; width: 100%; height: 100%; z-index: 5; pointer-events: none; }
+
+    /* Live blur over moving art is expensive, so the panels use a near-solid backing while zooming. */
+    .zoom .caption, .zoom .hud, .zoom .brand, .zoom nav { backdrop-filter: none; background: rgba(10, 12, 24, .86); }
+    .zoom .caption {
+      position: absolute;
+      /* Captions sit above every level's art, including the next one already showing in the frame. */
+      z-index: 10;
+      left: clamp(1rem, 4vw, 3.5rem);
+      bottom: clamp(1rem, 6vh, 3.5rem);
+      width: min(30rem, calc(100vw - 2rem));
+      max-height: calc(100vh - 8rem);
+      overflow: auto;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(14px);
+      transition: opacity .45s ease, transform .45s ease, visibility .45s;
+    }
+    .zoom .caption .hint { display: none; }
+    .zoom .level.current .caption { opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
+
+    .zoom .hud {
+      display: block;
+      position: fixed;
+      right: clamp(1rem, 3vw, 2.5rem);
+      top: 50%;
+      translate: 0 -50%;
+      z-index: 20;
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      pointer-events: none;
+      background: var(--glass);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 1.1rem 1.1rem .8rem 1.25rem;
+      width: 19rem;
+    }
+
+    /* Size, when and light as labelled rows. */
+    .readout { display: grid; grid-template-columns: auto 1fr; column-gap: 1rem; row-gap: .7rem; margin: 0; align-items: baseline; }
+    .readout > div { display: contents; }
+    .readout > div[hidden] { display: none; }
+    .readout dt { font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; color: var(--dim); text-align: left; }
+    .readout dd { margin: 0; font-size: .8rem; line-height: 1.35; color: var(--ink); }
+    .hud .now { display: block; font-size: clamp(1.4rem, 2.6vw, 2.1rem); font-weight: 700; line-height: 1; }
+    .hud .now sup { font-size: .55em; }
+    .hud .label { display: block; margin-top: .3rem; color: var(--dim); }
+    .readout #when, .readout #light { color: var(--accent); }
+
+    .frames rect { pointer-events: all; cursor: pointer; transition: stroke-width .2s, stroke .2s; }
+    .frames rect:hover { stroke-width: 3; stroke: var(--accent); }
+    .frames .frame-label {
+      font: 600 11px 'JetBrains Mono', monospace;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      pointer-events: none;
+      paint-order: stroke;
+      stroke-width: 3px;
+      stroke-linejoin: round;
+    }
+    .caption code { font-family: 'JetBrains Mono', monospace; font-size: .85em; color: var(--ink); }
+    .rail { list-style: none; margin: 1.25rem 0 0; padding: 0; display: grid; gap: .1rem; justify-items: end; pointer-events: auto; }
+    .rail button {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font: inherit;
+      font-size: .7rem;
+      color: var(--ink);
+      background: none;
+      border: 0;
+      padding: .25rem 0;
+      cursor: pointer;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, .9);
+    }
+    .rail button span { opacity: 0; transition: opacity .2s; }
+    .rail button::after { content: ""; width: 14px; height: 2px; background: currentColor; opacity: .45; transition: width .25s, opacity .25s; }
+    .rail button:hover span, .rail button:focus-visible span, .rail button.on span { opacity: 1; }
+    .rail button.on::after { width: 30px; opacity: 1; background: var(--accent); }
+
+    .zoom .scroll-hint {
+      position: fixed;
+      left: 50%;
+      bottom: 1.25rem;
+      translate: -50% 0;
+      z-index: 20;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .78rem;
+      color: var(--dim);
+      transition: opacity .4s;
+      animation: nudge 2s ease-in-out infinite;
+    }
+    .scroll-hint { display: none; }
+    .zoom .scroll-hint { display: block; }
+    .scroll-hint.gone { opacity: 0; }
+    @keyframes nudge { 50% { transform: translateY(5px); } }
+
+    .snap { position: absolute; left: 0; width: 1px; height: 1px; scroll-snap-align: start; }
+
+    .summary, .experience { position: relative; z-index: 1; background: #04050b; padding: 5rem clamp(1rem, 4vw, 3.5rem) 3rem; border-top: 1px solid var(--line); }
+    .summary > *, .experience > * { max-width: 1100px; margin-left: auto; margin-right: auto; }
+    .summary h2, .experience h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); letter-spacing: -.02em; margin-top: 0; margin-bottom: 1rem; }
+
+    .roles { list-style: none; padding: 0; }
+    .roles li { display: grid; grid-template-columns: 14rem 1fr; gap: 1.5rem; border-top: 1px solid var(--line); padding: 1rem 0; }
+    .roles .when { margin: 0; font-family: 'JetBrains Mono', monospace; font-size: .8rem; color: var(--accent); padding-top: .2rem; }
+    .roles h3 { margin: 0 0 .3rem; font-size: 1.1rem; }
+    .roles p:not(.when) { margin: 0; color: var(--dim); }
+    .education { color: var(--dim); margin-top: 1.5rem; }
+    .education strong { color: var(--ink); }
+    .cv-links { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; margin-top: 2rem; }
+    @media (max-width: 640px) { .roles li { grid-template-columns: 1fr; gap: .25rem; } }
+    /* Narrower than the 1100px column, so line it up with the column's left edge instead of centring it. */
+    .summary .summary-intro, .experience .summary-intro {
+      color: var(--dim);
+      font-size: 1.1rem;
+      max-width: 60ch;
+      margin-left: max(0px, calc((100% - 1100px) / 2));
+      margin-bottom: 2.5rem;
+    }
+
+    .zoom .hud, .zoom .scroll-hint { transition: opacity .3s; }
+    .past-tour .hud, .past-tour .scroll-hint { opacity: 0; visibility: hidden; }
+    .summary-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem 2.5rem; }
+    .summary-list li { border-top: 1px solid var(--line); padding-top: 1rem; }
+    .summary-list h3 { margin: 0 0 .35rem; font-size: 1.15rem; }
+    .summary-list p { margin: 0 0 .5rem; color: var(--dim); }
+    .summary-contact { margin-top: 2.5rem; color: var(--dim); }
+
+    footer { position: relative; z-index: 1; background: #04050b; color: var(--dim); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; padding: 1.5rem clamp(1rem, 4vw, 3.5rem) 2rem; font-size: .85rem; }
+    footer a { color: var(--dim); }
+
+    @media (max-width: 760px) {
+      .level { grid-template-columns: 1fr; gap: 1.5rem; }
+      .zoom .caption { bottom: 1rem; max-height: 40vh; padding: 1.2rem 1.25rem; scrollbar-width: thin; }
+      /* A compact strip under the menu on phones. */
+      .zoom .hud { top: 4rem; left: .6rem; right: .6rem; width: auto; translate: none; padding: .55rem .85rem; border-radius: 12px; }
+      .readout { row-gap: .2rem; column-gap: .75rem; }
+      .readout dd { font-size: .72rem; }
+      .hud .now { display: inline; font-size: 1rem; }
+      .hud .label { display: inline; margin: 0 0 0 .5rem; }
+      /* Lift the picture so the zoom frame sits between the readout and the caption. */
+      .zoom .art { top: 36%; }
+      .rail { display: none; }
+      .topbar { top: .6rem; left: .6rem; right: .6rem; }
+      nav a { padding: .25rem .55rem; font-size: .85rem; }
+      .brand { padding: .45rem .8rem; font-size: .9rem; }
+      .zoom .scroll-hint { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .caption, .rail button::after { transition: none; }
+      .fx, .fx * { animation: none !important; }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="hero-img" id="parallax"></div>
-  <div class="hero-bg"></div>
-  <!-- Add your site or application content here -->
-  <div class="hero-text">Parsons Projects</div>
+  <div class="topbar">
+    <a class="brand" href="#universe">Parsons Projects</a>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#experience">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <aside class="hud" aria-hidden="true">
+    <dl class="readout">
+      <div>
+        <dt>Size</dt>
+        <dd><span class="now" id="now">10<sup>26</sup> m</span><span class="label" id="label">93 billion light years</span></dd>
+      </div>
+      <div id="when-row" hidden>
+        <dt>When</dt>
+        <dd id="when"></dd>
+      </div>
+      <div id="light-row" hidden>
+        <dt>Light</dt>
+        <dd id="light"></dd>
+      </div>
+    </dl>
+    <ol class="rail" id="rail"></ol>
+  </aside>
+
+  <main id="tour">
+    <div class="stage" id="stage">
+      <section class="level" id="universe" data-when="13.8 billion years ago" data-power="26" data-label="93 billion light years" data-name="Universe" data-art="universe" data-bg="#04050b">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>26</sup> m · the observable universe</p>
+          <h1>Parsons Projects</h1>
+          <p>I'm Alan Parsons. I make games, developer tools and small web apps.</p>
+          <p>This page starts with the whole observable universe and zooms in ten times with each step, down to a single
+            pixel. It also moves forward in time as it goes, from the Big Bang to the moment you're reading this. My
+            projects are on the way down.</p>
+          <p class="hint">Scroll to zoom in ↓</p>
+        </div>
+      </section>
+
+      <section class="level" id="galaxy" data-when="13.6 billion years ago" data-power="21" data-label="100,000 light years" data-name="Galaxy" data-art="galaxy" data-bg="#05040d">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>21</sup> m · the Milky Way</p>
+          <h2>The Milky Way</h2>
+          <p>About 100,000 light years across. Light from the far side set off before there were any people, which is
+            the kind of fact I can think about for longer than I should.</p>
+        </div>
+      </section>
+
+      <section class="level" id="solar" data-when="4.6 billion years ago" data-power="13" data-label="67 times Earth–Sun" data-name="Solar system" data-art="solar" data-bg="#03040a">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>13</sup> m · the Solar System</p>
+          <h2>The Solar System</h2>
+          <p>Light from the Sun takes about eight minutes to reach Earth, so you only ever see it as it was a few
+            minutes ago.</p>
+        </div>
+      </section>
+
+      <section class="level" id="earth" data-when="4.5 billion years ago" data-power="7" data-label="10,000 km" data-name="Earth" data-art="earth" data-bg="#020713">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>7</sup> m · Earth</p>
+          <h2>Earth</h2>
+          <p>12,742 km across. Somewhere on it is a city built entirely out of answered maths questions.</p>
+        </div>
+      </section>
+
+      <section class="level" id="projects" data-when="2022" data-power="4" data-label="10 km" data-name="City" data-art="city" data-bg="#e8e3d3" data-frame="rgba(29,26,20,.8)">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>4</sup> m · a city</p>
+          <h2>Puzzles &amp; Mortar</h2>
+          <p>A free browser game of maths and word puzzles. Every puzzle you solve earns a building, and you lay them
+            out into a city of your own. I made it with 5 to 13 year olds in mind, but anyone can play. No accounts and
+            no adverts.</p>
+          <p>It's the project I've stuck with longest, on and off since 2022.</p>
+          <a href="https://puzzlesandmortar.com">Play it →</a>
+        </div>
+      </section>
+
+      <section class="level" id="keep" data-when="2026" data-power="2" data-label="100 m" data-name="Keep" data-art="keep" data-bg="#56703c">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>2</sup> m · a keep</p>
+          <h2>A keep, and a dungeon below it</h2>
+          <ul class="projects">
+            <li>
+              <span class="tag">Game · Live · Free in your browser</span>
+              <h3>Deep Keep</h3>
+              <p>A roguelite with no hidden dice. Every swing is rolled up front and shown to you, so each fight is a
+                puzzle you can work out before you commit. A run takes about ten minutes.</p>
+              <a href="https://playdeepkeep.com/">Play it →</a>
+            </li>
+            <li>
+              <span class="tag">Game · In progress</span>
+              <h3>Deep Dungeon</h3>
+              <p>A text adventure where you can type whatever you like. A rules engine works out what actually happens,
+                then a language model describes it.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="level" id="about" data-when="today" data-power="0" data-label="1 m" data-name="Desk" data-art="desk" data-bg="#8a5a36">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>0</sup> m · a desk</p>
+          <h2>About me</h2>
+          <p>By day I'm Technical Director at Craftsman+, where I look after technical architecture. Before that I
+            spent ten years leading frontend development at GForces. <a href="#experience">Work history and CV →</a></p>
+          <p>Most of what I build outside work starts as something I wanted to use myself, and occasionally turns out
+            to be useful to other people too.</p>
+          <p>Away from code I like time travel stories, anything about space, and puzzle games where you can see all
+            the information and still get it wrong.</p>
+        </div>
+      </section>
+
+      <section class="level" id="screen" data-when="this minute" data-power="-1" data-label="10 cm" data-name="Screen" data-art="screen" data-bg="#0d1117">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>−1</sup> m · a screen</p>
+          <h2>Tools, old and new</h2>
+          <p>From what I use every day back to my first public project.</p>
+          <ul class="projects">
+            <li>
+              <span class="tag">Desktop app · Open source</span>
+              <h3>Grove Bench</h3>
+              <p>A Windows app for running several Claude Code sessions at once. Each gets its own git worktree and
+                terminal, so they don't overwrite each other's changes.</p>
+              <a href="https://github.com/ParsonsProjects/grove-bench">Source →</a>
+            </li>
+            <li>
+              <span class="tag">Chrome extension · 2016 · Open source</span>
+              <h3>Tarsier</h3>
+              <p>A Chrome extension that rolled the best Trello extensions into one, built with Mithril.js. Named after
+                a small primate, because I like naming things after random animals.</p>
+              <a href="https://github.com/ParsonsProjects/Tarsier">Source →</a>
+            </li>
+            <li>
+              <span class="tag">jQuery plugin · 2015 · Open source</span>
+              <h3>Fluid Gallery</h3>
+              <p>My first public project. Images grow out of the page into a lightbox, based on Fluidbox, with galleries
+                you can flick through, titles, and support all the way back to Internet Explorer 8.</p>
+              <a href="https://parsonsprojects.github.io/fluidgallery/">Demo →</a> ·
+              <a href="https://github.com/ParsonsProjects/fluidgallery">Source →</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="level" id="contact" data-contact data-unless="code" data-when="next" data-power="-2" data-label="1 cm" data-name="One click" data-art="button" data-bg="#161b22">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>−2</sup> m · one button</p>
+          <h2>Get in touch</h2>
+          <p>If you'd like to talk about any of these, work on something together, or recommend a good time travel
+            book, send me an email.</p>
+          <a class="cta" href="mailto:parsonsprojects@outlook.com">Email me</a>
+          <p style="margin-top: 1rem"><a href="https://github.com/ParsonsProjects">GitHub</a> ·
+            <a href="https://puzzlesandmortar.com">Puzzles &amp; Mortar</a></p>
+        </div>
+      </section>
+
+      <!-- Code twist: keep zooming past the screen into a real line of Grove Bench, then one character, then one pixel. -->
+      <section class="level" id="code-line" data-only="code" hidden data-when="this second" data-power="-2" data-label="1 cm" data-name="Code" data-art="line" data-bg="#0d1117">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>−2</sup> m · one line of code</p>
+          <h2>One line of Grove Bench</h2>
+          <p>Line 216 of <code>worktree-manager.ts</code>. It gives each Claude Code session its own git worktree, which
+            is the whole reason they don't overwrite each other's work.</p>
+          <a href="https://github.com/ParsonsProjects/grove-bench/blob/HEAD/src/main/worktree-manager.ts#L216">See it on GitHub →</a>
+        </div>
+      </section>
+
+      <section class="level" id="code-char" data-only="code" hidden data-when="this millisecond" data-power="-3" data-label="1 mm" data-name="Character" data-art="char" data-bg="#0d1117">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>−3</sup> m · one character</p>
+          <h2>The w in worktree</h2>
+          <p>Up close, a letter on a screen is just a small grid of lit and unlit pixels.</p>
+        </div>
+      </section>
+
+      <section class="level" id="contact-code" data-contact data-only="code" hidden data-when="next" data-power="-4" data-label="0.1 mm" data-name="Pixel" data-art="pixel" data-bg="#000">
+        <canvas class="pic" aria-hidden="true"></canvas>
+        <div class="art" aria-hidden="true"></div>
+        <div class="caption">
+          <p class="power">10<sup>−4</sup> m · one pixel</p>
+          <h2>Get in touch</h2>
+          <p>Each pixel is three tiny lights: red, green and blue. This one is mostly blue, the colour my editor uses for
+            strings. That's as far down as this page goes.</p>
+          <p>If you'd like to talk about any of these, work on something together, or recommend a good time travel
+            book, send me an email.</p>
+          <a class="cta" href="mailto:parsonsprojects@outlook.com">Email me</a>
+          <p style="margin-top: 1rem"><a href="https://github.com/ParsonsProjects">GitHub</a> ·
+            <a href="https://puzzlesandmortar.com">Puzzles &amp; Mortar</a></p>
+        </div>
+      </section>
+
+      <svg class="frames" id="frames" aria-hidden="true"></svg>
+    </div>
+  </main>
+
+  <p class="scroll-hint" id="scroll-hint" aria-hidden="true">scroll, or click a square, to zoom in ↓</p>
+
+  <!-- The same information as the zoom, in one plain list: quick to scan, and easy for search and answer engines to read. -->
+  <section class="summary" id="summary" aria-labelledby="summary-title">
+    <h2 id="summary-title">Everything on one page</h2>
+    <p class="summary-intro">I'm Alan Parsons, a software developer. I make games, developer tools and small web apps.
+      Outside of code I like time travel stories, space, and puzzle games where nothing is hidden.</p>
+    <ul class="summary-list">
+      <li>
+        <h3>Puzzles &amp; Mortar</h3>
+        <p>A free browser game of maths and word puzzles. Every puzzle you solve earns a building for a city you plan
+          yourself. Made with 5 to 13 year olds in mind, but anyone can play. No accounts and no adverts. Live, in
+          development since 2022.</p>
+        <a href="https://puzzlesandmortar.com">puzzlesandmortar.com</a>
+      </li>
+      <li>
+        <h3>Grove Bench</h3>
+        <p>An open-source Windows app for running several Claude Code sessions at once, each in its own git worktree
+          and terminal so they don't overwrite each other's changes.</p>
+        <a href="https://github.com/ParsonsProjects/grove-bench">Source on GitHub</a>
+      </li>
+      <li>
+        <h3>Deep Keep</h3>
+        <p>A free tactical roguelite in the browser with no hidden dice. Every swing is rolled up front and shown, so
+          each fight is a full-information puzzle. A run takes about ten minutes.</p>
+        <a href="https://playdeepkeep.com/">playdeepkeep.com</a>
+      </li>
+      <li>
+        <h3>Deep Dungeon</h3>
+        <p>A text adventure where you can type anything. A rules engine decides what happens and a language model
+          describes it. In progress.</p>
+      </li>
+      <li>
+        <h3>Tarsier</h3>
+        <p>One of my early side projects, from 2016: an open-source Chrome extension that rolled the best Trello
+          extensions into one, built with Mithril.js.</p>
+        <a href="https://github.com/ParsonsProjects/Tarsier">Source on GitHub</a>
+      </li>
+      <li>
+        <h3>Fluid Gallery</h3>
+        <p>My first public project, from 2015: an open-source jQuery plugin where images grow out of the page into a
+          lightbox, with galleries, titles and support back to Internet Explorer 8.</p>
+        <a href="https://parsonsprojects.github.io/fluidgallery/">Demo</a> ·
+        <a href="https://github.com/ParsonsProjects/fluidgallery">Source on GitHub</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="experience" id="experience" aria-labelledby="experience-title">
+    <h2 id="experience-title">Work</h2>
+    <p class="summary-intro">Solutions architect with a frontend background, building for the web since 2009. I started
+      in design and frontend development and spent over a decade building interfaces and leading frontend teams. Now I
+      focus on technical architecture, microservices and event-driven systems, mostly in TypeScript.</p>
+    <ol class="roles">
+      <li>
+        <p class="when">March 2026 – now</p>
+        <div>
+          <h3>Technical Director · Craftsman+</h3>
+          <p>Leading the technical direction of a creative and playable ad platform. Recently: real-time multiplayer
+            editing (shipped in PLAY v5.4), the AI layer behind its chat assistant and video and asset generation, an MCP
+            server so AI agents can work inside the platform, and credit-based usage and licensing.</p>
+        </div>
+      </li>
+      <li>
+        <p class="when">January 2022 – March 2026</p>
+        <div>
+          <h3>Software Solutions Architect · Craftsman+</h3>
+          <p>Set up the original serverless platform on AWS, then built the export pipeline that turns creatives into
+            HTML5 playable ads for each ad network. Led and helped implement the playable analytics stack, from in-ad
+            events to real-time dashboards, which tracked nearly 3 billion ad sessions in the past year.</p>
+        </div>
+      </li>
+      <li>
+        <p class="when">September 2011 – January 2022</p>
+        <div>
+          <h3>Lead CSS / Frontend Developer · GForces</h3>
+          <p>Ten years in Maidstone building interfaces and leading the frontend team.</p>
+        </div>
+      </li>
+      <li>
+        <p class="when">May 2010 – September 2011</p>
+        <div>
+          <h3>Graphics &amp; Web Designer · SiteWizard.co.uk</h3>
+        </div>
+      </li>
+      <li>
+        <p class="when">2009 – 2010</p>
+        <div>
+          <h3>Graphics &amp; Web Designer · 1businesssystem</h3>
+        </div>
+      </li>
+    </ol>
+    <p class="education"><strong>Education:</strong> BA Architecture, University for the Creative Arts (2006 – 2009)</p>
+    <p class="cv-links">
+      <a class="cta" href="cv.pdf" download>Download CV (PDF)</a>
+      <a href="cv.html">View CV online</a>
+      <a href="https://www.linkedin.com/in/alan-parsons-474b2913">LinkedIn</a>
+    </p>
+    <p class="summary-contact">Get in touch by <a href="mailto:parsonsprojects@outlook.com">email</a> or find more on
+      <a href="https://github.com/ParsonsProjects">GitHub</a>.</p>
+  </section>
+
+  <footer>
+    <span>© Parsons Projects. After Charles and Ray Eames, <a href="https://www.eamesoffice.com/the-work/powers-of-ten/">Powers of Ten</a> (1977).</span>
+  </footer>
 
   <script>
-    (function() {
-      // Add event listener
-      document.addEventListener("mousemove", parallax);
-      const heroText = document.querySelector(".hero-text");
-      const heroBg = document.querySelector(".hero-bg");
-      const heroImg = document.querySelector(".hero-img");
-      // Magic happens here
-      function parallax(e) {
-        let _w = window.innerWidth/2;
-        let _h = window.innerHeight/2;
-        let _mouseX = e.clientX;
-        let _mouseY = e.clientY;
-        let _depth1 = `${(_mouseX - _w) * 0.01}px, ${(_mouseY - _h) * 0.01}px`;
-        let _depth2 = `${50 - (_mouseX - _w) * 0.06}px, ${50 - (_mouseY - _h) * 0.06}px`;
-        let _depth3 = `${50 - (_mouseX - _w) * 0.1}% ${50 - (_mouseY - _h) * 0.1}%`;
-        heroText.style.transform = `translate(${_depth1})`;
-        heroBg.style.transform = `translate(${_depth2}) scale(1.5)`;
-        heroImg.style.backgroundPosition = _depth3;
+    (function () {
+      // ---------- Twists ----------
+      // All three are on by default. ?twist=none, or a list such as ?twist=time,code, picks a subset for comparison.
+      const DEFAULT_TWISTS = ["time", "light", "code"];
+      const asked = new URLSearchParams(location.search).get("twist");
+      const twists = new Set(asked === null ? DEFAULT_TWISTS : asked.split(",").filter((t) => t && t !== "none"));
+      document.querySelectorAll(".level[data-only]").forEach((level) => {
+        if (twists.has(level.dataset.only)) level.hidden = false; else level.remove();
+      });
+      document.querySelectorAll(".level[data-unless]").forEach((level) => {
+        if (twists.has(level.dataset.unless)) level.remove();
+      });
+      // Whichever contact level survives answers to #contact.
+      const contactLevels = document.querySelectorAll(".level[data-contact]");
+      contactLevels[contactLevels.length - 1].id = "contact";
+
+      // ---------- Procedural artwork ----------
+      // Each function returns an SVG (1000×1000) and the centre of the frame the next level sits in.
+
+      function rng(seed) {
+        return function () {
+          seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+          let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+          t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+          return ((t ^ t >>> 14) >>> 0) / 4294967296;
+        };
       }
+      const gauss = (r) => (r() + r() + r() + r() - 2) / 2;
+      const f1 = (n) => n.toFixed(1);
+      const pick = (r, list) => list[Math.floor(r() * list.length)];
+
+      function blob(r, cx, cy, radius, wobble, points = 48) {
+        const phase = [r() * 6.3, r() * 6.3, r() * 6.3];
+        let d = "";
+        for (let i = 0; i <= points; i++) {
+          const a = (i / points) * Math.PI * 2;
+          const k = 1 + wobble * (0.5 * Math.sin(2 * a + phase[0]) + 0.3 * Math.sin(3 * a + phase[1]) + 0.2 * Math.sin(5 * a + phase[2]));
+          d += `${i ? "L" : "M"}${f1(cx + Math.cos(a) * radius * k)} ${f1(cy + Math.sin(a) * radius * k)}`;
+        }
+        return d + "Z";
+      }
+
+      // ---------- Animation layer ----------
+      // Small elements laid over each picture in the same 1000×1000 space, animated with transform and opacity only
+      // so the browser can run them without repainting the picture underneath.
+      const pc = (n) => `${(n / 10).toFixed(2)}%`;
+      const el = (cls, x, y, w, h, style = "", inner = "") =>
+        `<i class="${cls}" style="left:${pc(x - w / 2)};top:${pc(y - h / 2)};width:${pc(w)};height:${pc(h)};${style}">${inner}</i>`;
+      // Random duration, started part-way through so things don't move in step.
+      const timing = (r, base, spread) => {
+        const d = base + r() * spread;
+        return `animation-duration:${f1(d)}s;animation-delay:-${f1(r() * d)}s`;
+      };
+      const svgUrl = (svg, w = 1000, h = 1000) =>
+        "data:image/svg+xml;charset=utf-8," + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}">${svg}</svg>`);
+      // A lane spans the whole picture and slides across it, carrying one item along a road or across the sky.
+      const laneX = (y, h, item, style) => `<i class="lane-x" style="top:${pc(y - h / 2)};height:${pc(h)};${style}">${item}</i>`;
+      const laneY = (x, w, item, style) => `<i class="lane-y" style="left:${pc(x - w / 2)};width:${pc(w)};${style}">${item}</i>`;
+      // A body circling (cx, cy). Its size is a share of the orbit, so it scales with the picture.
+      const orbit = (cx, cy, radius, size, colour, period, angle, cls = "") =>
+        `<i class="orbit" style="left:${pc(cx - radius)};top:${pc(cy - radius)};width:${pc(radius * 2)};height:${pc(radius * 2)};--a:${f1(angle)}deg;animation-duration:${period}s">` +
+        `<b class="${cls}" style="width:${(size / radius * 100).toFixed(2)}%;height:${(size / radius * 100).toFixed(2)}%;background:${colour}"></b></i>`;
+
+      // The real line from Grove Bench that the code twist zooms into, drawn one glyph at a time so every
+      // character lands exactly where the zoom expects it.
+      const REAL_LINE = "await git(['worktree', 'add', wtPath, branchName], repoPath);";
+      function codeGlyphs(x0, baseline, size, cw) {
+        const colours = [...REAL_LINE].map(() => "#e6edf3");
+        const paint = (re, colour) => { for (const m of REAL_LINE.matchAll(re)) for (let i = 0; i < m[0].length; i++) colours[m.index + i] = colour; };
+        paint(/[()[\],;]/g, "#8b949e");
+        paint(/\bawait\b/g, "#ff7b72");
+        paint(/\bgit\b/g, "#d2a8ff");
+        paint(/'[^']*'/g, "#a5d6ff");
+        return [...REAL_LINE].map((ch, i) => ch === " " ? "" :
+          `<text x="${f1(x0 + i * cw + cw / 2)}" y="${baseline}" font-family="Consolas, 'Courier New', monospace" font-size="${size}" text-anchor="middle" fill="${colours[i]}">${ch.replace("'", "&#39;")}</text>`).join("");
+      }
+
+      const ART = {
+        universe() {
+          const r = rng(26);
+          let out = `<defs><radialGradient id="neb"><stop offset="0" stop-color="#6d4cff" stop-opacity=".22"/><stop offset="1" stop-color="#6d4cff" stop-opacity="0"/></radialGradient>
+            <radialGradient id="neb2"><stop offset="0" stop-color="#2fb3ff" stop-opacity=".16"/><stop offset="1" stop-color="#2fb3ff" stop-opacity="0"/></radialGradient></defs>`;
+          for (let i = 0; i < 14; i++) out += `<circle cx="${f1(r() * 1000)}" cy="${f1(r() * 1000)}" r="${f1(120 + r() * 220)}" fill="url(#${r() > .5 ? "neb" : "neb2"})"/>`;
+          const colours = ["#ffffff", "#cfd8ff", "#ffd8b0", "#b9a8ff", "#9fd3ff"];
+          for (let c = 0; c < 70; c++) {
+            const cx = r() * 1000, cy = r() * 1000, spread = 12 + r() * 40, count = 10 + Math.floor(r() * 40);
+            for (let i = 0; i < count; i++) {
+              out += `<circle cx="${f1(cx + gauss(r) * spread)}" cy="${f1(cy + gauss(r) * spread)}" r="${(.3 + r() * .8).toFixed(2)}" fill="${pick(r, colours)}" opacity="${f1(.35 + r() * .65)}"/>`;
+            }
+          }
+          for (let i = 0; i < 1100; i++) out += `<circle cx="${f1(r() * 1000)}" cy="${f1(r() * 1000)}" r="${(.25 + r() * .5).toFixed(2)}" fill="#fff" opacity="${f1(.2 + r() * .6)}"/>`;
+          const fx = 610, fy = 430;
+          out += `<ellipse cx="${fx}" cy="${fy}" rx="9" ry="5" fill="#fff4dd" transform="rotate(-25 ${fx} ${fy})"/><circle cx="${fx}" cy="${fy}" r="22" fill="url(#neb)"/>`;
+
+          // Slow nebula drift and a scattering of twinkling stars.
+          const ar = rng(260);
+          let anim = el("glow drift", 300, 650, 460, 320, "--c:rgba(109,76,255,.2);animation-duration:40s")
+            + el("glow drift", 760, 300, 400, 300, "--c:rgba(47,179,255,.16);animation-duration:55s;animation-direction:alternate-reverse");
+          for (let i = 0; i < 28; i++) {
+            const s = 2.2 + ar() * 2.2;
+            anim += el("tw", ar() * 1000, ar() * 1000, s, s, timing(ar, 2, 4));
+          }
+          return { svg: out, fx, fy, anim };
+        },
+
+        galaxy() {
+          const r = rng(21);
+          let out = `<defs><radialGradient id="core"><stop offset="0" stop-color="#fff6e0"/><stop offset=".25" stop-color="#ffd9a0" stop-opacity=".85"/><stop offset="1" stop-color="#ff9f5a" stop-opacity="0"/></radialGradient>
+            <radialGradient id="halo"><stop offset="0" stop-color="#7d8cff" stop-opacity=".25"/><stop offset="1" stop-color="#7d8cff" stop-opacity="0"/></radialGradient></defs>
+            <ellipse cx="500" cy="500" rx="470" ry="400" fill="url(#halo)"/>`;
+          const tilt = 0.85, wind = 1.9, base = 30;
+          for (let i = 0; i < 3200; i++) {
+            const arm = i % 2;
+            const rad = base + Math.pow(r(), .75) * 440;
+            const theta = arm * Math.PI + Math.log(rad / base) * wind + gauss(r) * (0.25 + 60 / rad);
+            const x = 500 + Math.cos(theta) * rad + gauss(r) * 6;
+            const y = 500 + Math.sin(theta) * rad * tilt + gauss(r) * 6;
+            const warm = rad < 140 ? "#ffe2b8" : r() < .06 ? "#ff9ad5" : r() < .5 ? "#cdd8ff" : "#ffffff";
+            out += `<circle cx="${f1(x)}" cy="${f1(y)}" r="${(.35 + r() * .9).toFixed(2)}" fill="${warm}" opacity="${f1(.3 + r() * .7)}"/>`;
+          }
+          out += `<ellipse cx="500" cy="500" rx="150" ry="120" fill="url(#core)"/>`;
+          // The Sun sits out in one of the arms, not at the centre.
+          const sunR = 250, sunT = Math.log(sunR / base) * wind;
+          const fx = 500 + Math.cos(sunT) * sunR, fy = 500 + Math.sin(sunT) * sunR * tilt;
+          out += `<circle cx="${f1(fx)}" cy="${f1(fy)}" r="2.6" fill="#fff3c4"/>`;
+
+          // The core breathes; stars along the arms twinkle.
+          const ar = rng(210);
+          let anim = el("glow pulse", 500, 500, 380, 300, "--c:rgba(255,214,150,.5);animation-duration:7s");
+          for (let i = 0; i < 34; i++) {
+            const rad = base + 40 + ar() * 380;
+            const theta = (i % 2) * Math.PI + Math.log(rad / base) * wind + gauss(ar) * 0.2;
+            const s = 2 + ar() * 2;
+            anim += el("tw", 500 + Math.cos(theta) * rad, 500 + Math.sin(theta) * rad * tilt, s, s,
+              `${timing(ar, 2.5, 4)};${ar() < .2 ? "background:#ff9ad5" : ""}`);
+          }
+          return { svg: out, fx, fy, anim };
+        },
+
+        solar() {
+          const r = rng(13);
+          const orbits = [55, 85, 125, 170, 255, 330, 395, 455];
+          const sizes = [3, 5, 6, 4, 15, 12, 8, 8];
+          const colours = ["#b1a79a", "#e8c48a", "#4f8ff7", "#d06a3a", "#d9b38c", "#e6d199", "#9fe3ef", "#5b7cf0"];
+          let out = `<defs><radialGradient id="sun"><stop offset="0" stop-color="#fff9e0"/><stop offset=".2" stop-color="#ffd36b"/><stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/></radialGradient></defs>`;
+          for (let i = 0; i < 400; i++) out += `<circle cx="${f1(r() * 1000)}" cy="${f1(r() * 1000)}" r="${f1(.3 + r() * .8)}" fill="#fff" opacity="${f1(.15 + r() * .5)}"/>`;
+          out += `<circle cx="500" cy="500" r="80" fill="url(#sun)"/><circle cx="500" cy="500" r="16" fill="#fff4cc"/>`;
+          // Every planet orbits except Earth, which has to stay where the zoom frame is. The Moon circles it instead.
+          const periods = [9, 15, 0, 34, 80, 120, 170, 230];
+          let fx = 0, fy = 0;
+          let anim = el("glow pulse", 500, 500, 210, 210, "--c:rgba(255,190,90,.45);animation-duration:5s");
+          orbits.forEach((o, i) => {
+            out += `<circle cx="500" cy="500" r="${o}" fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1"/>`;
+            const a = i === 2 ? -0.62 : r() * Math.PI * 2;
+            if (i === 2) {
+              fx = 500 + Math.cos(a) * o; fy = 500 + Math.sin(a) * o;
+              out += `<circle cx="${f1(fx)}" cy="${f1(fy)}" r="${sizes[i]}" fill="${colours[i]}"/>`;
+              anim += orbit(fx, fy, 11, 1.6, "#ddd", 6, -20);
+              return;
+            }
+            anim += orbit(500, 500, o, sizes[i], colours[i], periods[i], a * 57.3, i === 5 ? "ringed" : "");
+          });
+          return { svg: out, fx, fy, anim };
+        },
+
+        earth() {
+          const r = rng(7);
+          let out = `<defs>
+            <radialGradient id="ocean" cx=".38" cy=".35"><stop offset="0" stop-color="#4f9cff"/><stop offset=".6" stop-color="#1b5fc4"/><stop offset="1" stop-color="#0a2a66"/></radialGradient>
+            <radialGradient id="atmo"><stop offset=".86" stop-color="#7fc3ff" stop-opacity="0"/><stop offset=".9" stop-color="#7fc3ff" stop-opacity=".55"/><stop offset="1" stop-color="#7fc3ff" stop-opacity="0"/></radialGradient>
+            <clipPath id="globe"><circle cx="500" cy="500" r="400"/></clipPath></defs>`;
+          for (let i = 0; i < 300; i++) out += `<circle cx="${f1(r() * 1000)}" cy="${f1(r() * 1000)}" r="${f1(.3 + r() * .7)}" fill="#fff" opacity="${f1(.1 + r() * .4)}"/>`;
+          out += `<circle cx="500" cy="500" r="445" fill="url(#atmo)"/><g clip-path="url(#globe)"><circle cx="500" cy="500" r="400" fill="url(#ocean)"/>`;
+          const land = [[560, 440, 95], [330, 380, 70], [420, 640, 85], [690, 650, 60], [700, 300, 45], [250, 560, 40]];
+          land.forEach(([x, y, s]) => {
+            out += `<path d="${blob(r, x, y, s, .35)}" fill="#4f8f4a"/><path d="${blob(r, x + 8, y + 6, s * .55, .4)}" fill="#8a7a4a" opacity=".55"/>`;
+          });
+          out += `<path d="${blob(r, 500, 110, 160, .2)}" fill="#f2f6ff"/><path d="${blob(r, 500, 900, 170, .2)}" fill="#f2f6ff"/></g>`;
+          const fx = 560, fy = 440;
+          out += `<circle cx="${fx}" cy="${fy}" r="3" fill="#ffe6a8"/>`;
+
+          // Clouds drift across the globe under the night-side shading. The cloud tile repeats, so it is kept
+          // clear of its left and right edges to hide the seam.
+          let clouds = `<defs><filter id="soft"><feGaussianBlur stdDeviation="6"/></filter></defs><g filter="url(#soft)" fill="#fff" opacity=".6">`;
+          for (let i = 0; i < 18; i++) clouds += `<path d="${blob(r, 120 + r() * 760, 120 + r() * 760, 20 + r() * 45, .5)}"/>`;
+          clouds += "</g>";
+          let anim = el("globe", 500, 500, 800, 800, "",
+            `<b class="cloud-strip" style="background-image:url('${svgUrl(clouds)}')"></b><b class="shade"></b>`);
+          // City lights flicker on the night side.
+          const ar = rng(70);
+          for (let i = 0; i < 10; i++) {
+            anim += el("tw", 660 + ar() * 70, 620 + ar() * 70, 2.4, 2.4, `${timing(ar, 1.5, 3)};background:#ffd27a`);
+          }
+          return { svg: out, fx, fy, anim };
+        },
+
+        city() {
+          const r = rng(4);
+          const palette = ["#f4a261", "#e9c46a", "#2a9d8f", "#e76f51", "#8ab17d", "#c8b6ff", "#ffd6a5", "#a8dadc", "#f6bd60"];
+          let out = `<rect width="1000" height="1000" fill="#e8e3d3"/>`;
+          const xs = [0], ys = [0];
+          while (xs[xs.length - 1] < 1000) xs.push(xs[xs.length - 1] + 70 + r() * 70);
+          while (ys[ys.length - 1] < 1000) ys.push(ys[ys.length - 1] + 70 + r() * 70);
+          const fx = 640, fy = 570;
+          for (let i = 0; i < xs.length - 1; i++) {
+            for (let j = 0; j < ys.length - 1; j++) {
+              const x0 = xs[i] + 6, y0 = ys[j] + 6, w = xs[i + 1] - xs[i] - 12, h = ys[j + 1] - ys[j] - 12;
+              const holdsKeep = fx > x0 && fx < x0 + w && fy > y0 && fy < y0 + h;
+              if (holdsKeep) { out += `<rect x="${f1(x0)}" y="${f1(y0)}" width="${f1(w)}" height="${f1(h)}" fill="#7ea05a"/>`; continue; }
+              if (r() < .14) {
+                out += `<rect x="${f1(x0)}" y="${f1(y0)}" width="${f1(w)}" height="${f1(h)}" rx="4" fill="#9cc47a"/>`;
+                for (let t = 0; t < 6; t++) out += `<circle cx="${f1(x0 + 8 + r() * (w - 16))}" cy="${f1(y0 + 8 + r() * (h - 16))}" r="${f1(5 + r() * 6)}" fill="#6f9d55"/>`;
+                continue;
+              }
+              out += `<rect x="${f1(x0)}" y="${f1(y0)}" width="${f1(w)}" height="${f1(h)}" fill="#d9d2bf"/>`;
+              const cols = 1 + Math.floor(r() * 3), rows = 1 + Math.floor(r() * 3);
+              for (let a = 0; a < cols; a++) for (let b = 0; b < rows; b++) {
+                const bw = w / cols, bh = h / rows;
+                out += `<rect x="${f1(x0 + a * bw + 3)}" y="${f1(y0 + b * bh + 3)}" width="${f1(bw - 6)}" height="${f1(bh - 6)}" rx="2" fill="${pick(r, palette)}"/>`;
+              }
+            }
+          }
+          out += `<path d="M-20 180 C 200 260, 300 120, 480 260 S 760 420, 1020 330" fill="none" stroke="#7fb7e0" stroke-width="46"/>`;
+          const avenues = xs.filter((x, i) => i % 3 === 1), streets = ys.filter((y, i) => i % 3 === 2);
+          avenues.forEach((x) => { out += `<rect x="${f1(x - 6)}" y="0" width="12" height="1000" fill="#fbf8f0"/>`; });
+          streets.forEach((y) => { out += `<rect x="0" y="${f1(y - 6)}" width="1000" height="12" fill="#fbf8f0"/>`; });
+          // A tiny keep in its park.
+          out += `<rect x="${fx - 14}" y="${fy - 14}" width="28" height="28" fill="#8b8378"/><rect x="${fx - 6}" y="${fy - 6}" width="12" height="12" fill="#6b6359"/>`;
+          [[-14, -14], [14, -14], [-14, 14], [14, 14]].forEach(([dx, dy]) => { out += `<circle cx="${fx + dx}" cy="${fy + dy}" r="5" fill="#6b6359"/>`; });
+
+          // Traffic: one car each way on every main road.
+          const ar = rng(40);
+          const cars = ["#e63946", "#1d3557", "#f1faee", "#457b9d", "#ffb703", "#2a9d8f"];
+          let anim = "";
+          streets.forEach((y) => [-3, 3].forEach((side) => {
+            anim += laneX(y + side, 4.5, `<b style="width:${pc(11)};background:${pick(ar, cars)}"></b>`,
+              `${timing(ar, 16, 14)}${side < 0 ? ";animation-direction:reverse" : ""}`);
+          }));
+          avenues.forEach((x) => [-3, 3].forEach((side) => {
+            anim += laneY(x + side, 4.5, `<b style="height:${pc(11)};background:${pick(ar, cars)}"></b>`,
+              `${timing(ar, 16, 14)}${side > 0 ? ";animation-direction:reverse" : ""}`);
+          }));
+          return { svg: out, fx, fy, anim };
+        },
+
+        keep() {
+          const r = rng(2);
+          let out = `<rect width="1000" height="1000" fill="#6f8f4e"/>`;
+          for (let i = 0; i < 900; i++) out += `<circle cx="${f1(r() * 1000)}" cy="${f1(r() * 1000)}" r="${f1(1 + r() * 3)}" fill="${r() > .5 ? "#7f9f5c" : "#5f7f42"}"/>`;
+          out += `<rect x="190" y="190" width="620" height="620" rx="60" fill="none" stroke="#5a8fb8" stroke-width="70"/>
+            <rect x="260" y="260" width="480" height="480" fill="#c9b994"/>
+            <rect x="260" y="260" width="480" height="480" fill="none" stroke="#8b8378" stroke-width="30"/>`;
+          [[260, 260], [740, 260], [260, 740], [740, 740]].forEach(([x, y]) => {
+            out += `<circle cx="${x}" cy="${y}" r="48" fill="#8b8378"/><circle cx="${x}" cy="${y}" r="30" fill="#a79f93"/>`;
+          });
+          out += `<rect x="460" y="730" width="80" height="70" fill="#8b8378"/><rect x="480" y="760" width="40" height="80" fill="#7a5a3a"/>
+            <rect x="430" y="380" width="180" height="180" fill="#7a7066"/><rect x="455" y="405" width="130" height="130" fill="#93897d"/>
+            <path d="M455 405 L585 535 M585 405 L455 535" stroke="#7a7066" stroke-width="6"/>
+            <rect x="300" y="300" width="22" height="22" fill="#2b2420"/>`;
+          // A small workshop in the courtyard. Its roof is where we zoom in.
+          const fx = 650, fy = 650;
+          out += `<rect x="${fx - 45}" y="${fy - 32}" width="90" height="64" fill="#b4533a"/><path d="M${fx - 45} ${fy} H${fx + 45}" stroke="#8e3f2c" stroke-width="4"/>
+            <rect x="${fx + 20}" y="${fy - 26}" width="12" height="12" fill="#d8d0c0"/>`;
+          for (let i = 0; i < 26; i++) out += `<circle cx="${f1(300 + r() * 400)}" cy="${f1(570 + r() * 150)}" r="2" fill="#9c8e6e"/>`;
+
+          const ar = rng(20);
+          let anim = "";
+          // Flags on each tower and the gatehouse.
+          [[260, 260], [740, 260], [260, 740], [740, 740], [500, 765]].forEach(([x, y]) => {
+            out += `<circle cx="${x}" cy="${y}" r="4" fill="#4a423a"/>`;
+            anim += el("flag", x + 15, y, 30, 13, timing(ar, 1.4, .8));
+          });
+          // Light catching the water in the moat.
+          [[300, 190, 44, 3], [520, 194, 36, 3], [690, 186, 40, 3], [400, 810, 44, 3], [640, 806, 32, 3], [190, 420, 3, 40], [810, 560, 3, 44], [186, 640, 3, 30]]
+            .forEach(([x, y, w, h]) => { anim += el("shimmer", x, y, w, h, timing(ar, 2.5, 3)); });
+          // Cloud shadows passing over.
+          [220, 560, 840].forEach((y) => {
+            anim += laneX(y, 190, `<b class="cloud-shadow" style="width:${pc(300)}"></b>`, timing(ar, 45, 30));
+          });
+          return { svg: out, fx, fy, anim };
+        },
+
+        desk() {
+          const r = rng(1);
+          let out = `<rect width="1000" height="1000" fill="#a06c44"/>`;
+          for (let i = 0; i < 70; i++) {
+            const y = r() * 1000;
+            out += `<path d="M0 ${f1(y)} C 250 ${f1(y + gauss(r) * 20)}, 600 ${f1(y + gauss(r) * 20)}, 1000 ${f1(y + gauss(r) * 14)}" stroke="${r() > .5 ? "#8e5c37" : "#b47d52"}" stroke-width="${f1(1 + r() * 3)}" fill="none" opacity=".6"/>`;
+          }
+          // Laptop, opened flat: screen above, keyboard below.
+          out += `<rect x="290" y="210" width="420" height="270" rx="14" fill="#2a2e35"/><rect x="305" y="225" width="390" height="240" rx="4" fill="#0d1117"/>`;
+          for (let i = 0; i < 14; i++) out += `<rect x="${f1(325 + (i % 3) * 10)}" y="${245 + i * 15}" width="${f1(60 + r() * 180)}" height="5" rx="2" fill="${pick(r, ["#3fb950", "#58a6ff", "#d29922", "#f778ba", "#8b949e"])}" opacity=".9"/>`;
+          out += `<rect x="290" y="480" width="420" height="280" rx="14" fill="#c9ccd2"/>`;
+          for (let row = 0; row < 5; row++) for (let col = 0; col < 13; col++) out += `<rect x="${310 + col * 29.5}" y="${500 + row * 30}" width="25" height="25" rx="4" fill="#e9ebee"/>`;
+          out += `<rect x="430" y="660" width="140" height="80" rx="8" fill="#b8bbc2"/>`;
+          // Mug, notebook, pencil, plant.
+          out += `<circle cx="830" cy="290" r="62" fill="#ece6dc"/><circle cx="830" cy="290" r="48" fill="#5b3a20"/><path d="M890 270 q40 20 0 40" stroke="#ece6dc" stroke-width="14" fill="none"/>
+            <g transform="rotate(-9 150 560)"><rect x="60" y="430" width="190" height="260" rx="6" fill="#f5efe1"/>`;
+          for (let i = 0; i < 9; i++) out += `<rect x="80" y="${470 + i * 22}" width="150" height="2" fill="#c9d6e6"/>`;
+          out += `<text x="155" y="640" font-family="Georgia, serif" font-size="70" fill="#3a3a3a" text-anchor="middle">?</text></g>
+            <rect x="70" y="760" width="200" height="12" rx="6" fill="#f2c94c" transform="rotate(14 170 766)"/>`;
+          const fx = 640, fy = 430;
+
+          // The plant is its own small picture so it can sway.
+          let plant = "";
+          for (let i = 0; i < 9; i++) {
+            const a = i / 9 * Math.PI * 2, x = 85 + Math.cos(a) * 34, y = 85 + Math.sin(a) * 34;
+            plant += `<ellipse cx="${f1(x)}" cy="${f1(y)}" rx="38" ry="13" fill="${i % 2 ? "#4c8a3f" : "#5fa04e"}" transform="rotate(${f1(a * 57.3)} ${f1(x)} ${f1(y)})"/>`;
+          }
+          plant += `<circle cx="85" cy="85" r="18" fill="#3e7033"/>`;
+          const ar = rng(10);
+          let anim = el("sway", 840, 800, 170, 170, "", `<img alt="" src="${svgUrl(plant, 170, 170)}">`);
+          // Steam off the coffee.
+          for (let i = 0; i < 4; i++) anim += el("steam", 815 + ar() * 30, 270, 46, 46, timing(ar, 3.5, 2));
+          // A line of code being typed, with the cursor after it.
+          anim += el("typeline", 380, 455, 110, 5, "background:#58a6ff;animation-duration:3.5s")
+            + el("caret", 439, 455, 3, 10, "background:#e6edf3");
+          return { svg: out, fx, fy, anim };
+        },
+
+        screen() {
+          const r = rng(-1);
+          const code = ["#3fb950", "#58a6ff", "#d29922", "#f778ba", "#8b949e", "#e6edf3"];
+          let out = `<rect width="1000" height="1000" fill="#0d1117"/><rect width="1000" height="44" fill="#161b22"/>
+            <circle cx="28" cy="22" r="7" fill="#ff5f56"/><circle cx="52" cy="22" r="7" fill="#ffbd2e"/><circle cx="76" cy="22" r="7" fill="#27c93f"/>
+            <rect x="0" y="44" width="230" height="956" fill="#010409"/>`;
+          ["puzzles-and-mortar", "grove-bench", "deep-keep", "deep-dungeon", "tarsier", "fluidgallery", "dream-projects"].forEach((name, i) => {
+            out += `<text x="24" y="${92 + i * 34}" font-family="Consolas, monospace" font-size="17" fill="${i === 1 ? "#e6edf3" : "#8b949e"}">${i === 1 ? "▾" : "▸"} ${name}</text>`;
+          });
+          out += `<rect x="230" y="44" width="200" height="40" fill="#0d1117"/><text x="250" y="70" font-family="Consolas, monospace" font-size="15" fill="#e6edf3">thread-1.ts</text>`;
+          // The real line is indented a little so its zoom frame lands clear of the caption on the left.
+          const realRow = 11, REAL_X = 400;
+          for (let i = 0; i < 26; i++) {
+            const indent = (i % 5) * 18 + (i % 2) * 18;
+            let x = 270 + indent;
+            out += `<text x="246" y="${118 + i * 24}" font-family="Consolas, monospace" font-size="12" fill="#484f58">${i + 1}</text>`;
+            if (twists.has("code") && i === realRow) {
+              // The real line, highlighted as the line the cursor is on.
+              out += `<rect x="236" y="${104 + i * 24}" width="400" height="20" fill="#161b22"/>` + codeGlyphs(REAL_X, 382, 10, 6);
+              continue;
+            }
+            const parts = 1 + Math.floor(r() * 4);
+            for (let p = 0; p < parts; p++) {
+              const w = 30 + r() * 110;
+              out += `<rect x="${f1(x)}" y="${110 + i * 24}" width="${f1(w)}" height="8" rx="3" fill="${pick(r, code)}" opacity=".85"/>`;
+              x += w + 10;
+            }
+          }
+          // Agent panel: three threads working side by side.
+          out += `<rect x="640" y="44" width="360" height="956" fill="#010409"/><text x="660" y="80" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3">Agents</text>`;
+          ["thread-1", "thread-2", "thread-3"].forEach((name, i) => {
+            const y = 100 + i * 150;
+            out += `<rect x="656" y="${y}" width="328" height="130" rx="10" fill="#161b22" stroke="#30363d"/>
+              <circle cx="676" cy="${y + 22}" r="5" fill="#3fb950"/><text x="690" y="${y + 27}" font-family="Consolas, monospace" font-size="14" fill="#e6edf3">${name}</text>`;
+            for (let l = 0; l < 4; l++) out += `<rect x="672" y="${y + 46 + l * 18}" width="${f1(80 + r() * 200)}" height="7" rx="3" fill="#8b949e" opacity=".6"/>`;
+          });
+          // A message toast with a button: that's where we zoom in, unless the code twist is on, in which case we
+          // zoom into "worktree" on the real line. Both are kept near the middle so they're on screen.
+          const [fx, fy] = twists.has("code") ? [REAL_X + 12.5 * 6, 378] : [720, 660];
+          out += `<rect x="656" y="570" width="328" height="120" rx="12" fill="#1f2630" stroke="#3d4654"/>
+            <text x="676" y="604" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3">New message</text>
+            <text x="676" y="628" font-family="Arial, sans-serif" font-size="13" fill="#8b949e">Want to say hello?</text>
+            <rect x="${fx - 40}" y="${fy - 14}" width="80" height="28" rx="14" fill="#ffd36b"/>`;
+
+          // Agents at work: status lights pulse and each one's output grows. A new line is typed in the editor.
+          const ar = rng(-10);
+          let anim = "";
+          [100, 250, 400].forEach((y) => {
+            anim += el("pulse-dot", 676, y + 22, 12, 12, timing(ar, 1.6, 1.2))
+              + el("typeline", 762, y + 118, 180, 7, `background:#3fb950;opacity:.7;${timing(ar, 3, 3)}`);
+          });
+          anim += el("typeline", 340, 742, 140, 8, "background:#d29922;animation-duration:4s")
+            + el("caret", 412, 742, 3, 14, "background:#e6edf3");
+          return { svg: out, fx, fy, anim };
+        },
+
+        button() {
+          let out = `<rect width="1000" height="1000" fill="#1f2630"/>
+            <rect x="200" y="420" width="600" height="160" rx="80" fill="#ffd36b"/>
+            <rect x="200" y="420" width="600" height="160" rx="80" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="3"/>
+            <text x="500" y="525" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#1a1405" text-anchor="middle">Say hello</text>`;
+
+          // Every few seconds the cursor clicks: the button dips and a ripple spreads from the pointer.
+          const cursor = `<path d="M10 10 l0 120 l32 -30 l22 50 l20 -9 l-22 -50 l44 -2 z" fill="#fff" stroke="#111" stroke-width="5" stroke-linejoin="round"/>`;
+          const anim = el("glow pulse", 500, 500, 820, 360, "--c:rgba(255,211,107,.22);animation-duration:4s")
+            + el("btn-flash", 500, 500, 600, 160)
+            + el("ripple", 640, 600, 70, 70)
+            + el("press", 690, 670, 120, 160, "", `<img alt="" src="${svgUrl(cursor, 120, 160)}">`);
+          return { svg: out, anim };
+        },
+
+        line() {
+          // The same line ten times bigger, positioned so the "w" of worktree sits in the middle.
+          const cw = 60, x0 = 500 - 12.5 * cw;
+          const r = rng(-20);
+          let out = `<rect width="1000" height="1000" fill="#0d1117"/><rect y="440" width="1000" height="120" fill="#161b22"/>`;
+          [-2, -1, 1, 2].forEach((row) => {
+            let x = x0 + (row % 2 ? 4 : 2) * cw;
+            for (let p = 0; p < 3; p++) {
+              const w = (3 + Math.floor(r() * 6)) * cw;
+              out += `<rect x="${f1(x)}" y="${480 + row * 240}" width="${w - cw}" height="44" rx="10" fill="${pick(r, ["#8b949e", "#58a6ff", "#a5d6ff", "#e6edf3"])}" opacity=".25"/>`;
+              x += w;
+            }
+          });
+          out += codeGlyphs(x0, 535, 100, cw);
+          // "worktree" is softly highlighted; the cursor blinks before "git", clear of the zoom frame.
+          const anim = el("glow pulse", x0 + 16 * cw, 500, 8 * cw + 60, 150, "--c:rgba(255,211,107,.18);animation-duration:4s")
+            + el("caret", x0 + 6 * cw, 500, 6, 110, "background:#e6edf3");
+          return { svg: out, fx: 500, fy: 500, anim };
+        },
+
+        char() {
+          // The "w" as a screen draws it: lit pixels, with faint anti-aliased neighbours.
+          const glyph = ["#.....#", "#.....#", "#..#..#", "#..#..#", "#.#.#.#", ".#...#."];
+          const lit = new Set();
+          glyph.forEach((row, y) => [...row].forEach((c, x) => { if (c === "#") lit.add(`${x + 1},${y + 3}`); }));
+          let out = `<rect width="1000" height="1000" fill="#0d1117"/>`;
+          for (let y = 0; y < 10; y++) for (let x = 0; x < 10; x++) {
+            const on = lit.has(`${x},${y}`);
+            const edge = !on && [[1, 0], [-1, 0], [0, 1], [0, -1]].some(([dx, dy]) => lit.has(`${x + dx},${y + dy}`));
+            const fill = on ? "#a5d6ff" : edge ? "#2c4258" : "#0d1117";
+            out += `<rect x="${x * 100 + 3}" y="${y * 100 + 3}" width="94" height="94" rx="6" fill="${fill}"/>`;
+          }
+          // The screen refreshes top to bottom.
+          const anim = laneY(500, 1000, `<b class="scan" style="height:${pc(90)}"></b>`, "animation-duration:3.2s");
+          // Zoom into the middle stroke of the w.
+          return { svg: out, fx: 450, fy: 550, anim };
+        },
+
+        pixel() {
+          // One pixel is three sub-pixels. #a5d6ff is 65% red, 84% green and 100% blue.
+          // Deep colours and a vignette keep it from shouting, so the closing caption stays the focus.
+          const bars = [["#c4363b", .65], ["#2b8f5c", .84], ["#3657c9", 1]];
+          let out = `<defs><radialGradient id="vig"><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".8"/></radialGradient></defs>
+            <rect width="1000" height="1000" fill="#000"/>`;
+          let anim = "";
+          bars.forEach(([colour, level], i) => {
+            const x = 40 + i * 320;
+            out += `<rect x="${x}" y="70" width="280" height="860" rx="36" fill="${colour}" opacity="${(level * .75).toFixed(2)}"/>`;
+            anim += el("glow pulse", x + 140, 500, 420, 980, `--c:${colour}26;--lo:.6;animation-duration:${f1(2.6 + i * .7)}s`);
+          });
+          out += `<rect width="1000" height="1000" fill="url(#vig)"/>`;
+          return { svg: out, anim };
+        },
+      };
+
+      const levels = [...document.querySelectorAll(".level")];
+      const N = levels.length;
+      const pictures = [];
+      const frames = levels.map((level) => {
+        const { svg, fx, fy, anim } = ART[level.dataset.art]();
+        const img = new Image();
+        pictures.push(img);
+        img.alt = "";
+        img.decoding = "async";
+        img.src = svgUrl(svg);
+        const layer = document.createElement("div");
+        layer.className = "fx";
+        layer.innerHTML = anim;
+        level.querySelector(".art").append(img, layer);
+        // Decode now, not the first time the level scrolls into view.
+        img.decode().catch(() => { });
+        // Offset of the next level's frame from this level's centre, as a fraction of its width.
+        return fx === undefined ? [0, 0] : [(fx - 500) / 1000, (fy - 500) / 1000];
+      });
+
+      // Without motion, the stacked static layout is the whole experience.
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      // ---------- Zoom mode ----------
+      const root = document.documentElement;
+      const main = document.getElementById("tour");
+      const stage = document.getElementById("stage");
+      const arts = levels.map((l) => l.querySelector(".art"));
+      const pics = levels.map((l) => l.querySelector(".pic"));
+      const hint = document.getElementById("scroll-hint");
+      root.classList.add("zoom");
+
+      // World positions: level k is 10^-k wide and centred on the previous level's frame.
+      const centres = [[0, 0]];
+      for (let k = 1; k < N; k++) {
+        const w = Math.pow(10, -(k - 1));
+        centres.push([centres[k - 1][0] + frames[k - 1][0] * w, centres[k - 1][1] + frames[k - 1][1] * w]);
+      }
+
+      // Rail of levels to jump between.
+      const rail = document.getElementById("rail");
+      const railButtons = levels.map((level, k) => {
+        const li = document.createElement("li");
+        const b = document.createElement("button");
+        b.type = "button";
+        b.innerHTML = `<span>${level.dataset.name}</span>`;
+        b.setAttribute("aria-label", `Zoom to ${level.dataset.name}`);
+        b.addEventListener("click", () => jumpTo(k));
+        li.append(b);
+        rail.append(li);
+        return b;
+      });
+
+      // One outline per level, drawn in screen space so it stays 1.5px at any zoom.
+      const SVG_NS = "http://www.w3.org/2000/svg";
+      const rects = levels.map((level, k) => {
+        const colour = k > 0 && levels[k - 1].dataset.frame || "rgba(255,255,255,.75)";
+        const rect = document.createElementNS(SVG_NS, "rect");
+        rect.setAttribute("fill", "none");
+        rect.setAttribute("stroke-width", "1.5");
+        rect.setAttribute("stroke", colour);
+        rect.style.display = "none";
+        // Clicking a frame zooms into it.
+        const title = document.createElementNS(SVG_NS, "title");
+        title.textContent = `Zoom in to ${level.dataset.name}`;
+        rect.append(title);
+        rect.addEventListener("click", () => jumpTo(k));
+        // The frame's label says what's inside, with a halo that contrasts with the frame colour.
+        const label = document.createElementNS(SVG_NS, "text");
+        label.setAttribute("class", "frame-label");
+        label.setAttribute("fill", colour);
+        label.setAttribute("stroke", levels[k - 1]?.dataset.frame ? "rgba(255,255,255,.7)" : "rgba(0,0,0,.65)");
+        label.textContent = level.dataset.name;
+        label.style.display = "none";
+        document.getElementById("frames").append(rect, label);
+        rect.label = label;
+        return rect;
+      });
+
+      // Light twist: how long light takes to cross whatever is on screen.
+      const YEAR = 31557600;
+      const LIGHT_UNITS = [[1e9 * YEAR, "billion years"], [1e6 * YEAR, "million years"], [1e3 * YEAR, "thousand years"],
+        [YEAR, "years"], [86400, "days"], [3600, "hours"], [60, "minutes"], [1, "seconds"], [1e-3, "milliseconds"],
+        [1e-6, "microseconds"], [1e-9, "nanoseconds"], [1e-12, "picoseconds"], [1e-15, "femtoseconds"]];
+      function lightTime(metres) {
+        const seconds = metres / 299792458;
+        const [size, name] = LIGHT_UNITS.find(([size]) => seconds >= size) || LIGHT_UNITS[LIGHT_UNITS.length - 1];
+        const n = seconds / size;
+        const value = n < 10 ? n.toFixed(1).replace(/\.0$/, "") : String(Math.round(n));
+        return `${value} ${value === "1" ? name.replace(/s$/, "") : name} to cross`;
+      }
+      // Time twist: zooming in also moves forward in time, from the Big Bang to whoever is reading this.
+      const whenLine = document.getElementById("when"), lightLine = document.getElementById("light");
+      document.getElementById("when-row").hidden = !twists.has("time");
+      document.getElementById("light-row").hidden = !twists.has("light");
+      let lastLight = "";
+
+      let V = 0, STEP = 0, top = 0, originX = 0, originY = 0;
+      const snaps = levels.map(() => {
+        const s = document.createElement("div");
+        s.className = "snap";
+        main.append(s);
+        return s;
+      });
+
+      function layout() {
+        // A square as wide as the screen's longest side covers it at rest.
+        V = Math.max(innerWidth, innerHeight);
+        STEP = Math.round(innerHeight * 1.15);
+        root.style.setProperty("--V", `${V}px`);
+        main.style.position = "relative";
+        main.style.height = `${STEP * (N - 1) + innerHeight}px`;
+        snaps.forEach((s, k) => { s.style.top = `${k * STEP}px`; });
+        top = main.getBoundingClientRect().top + scrollY;
+        // Where an untransformed level's centre sits on screen (it moves up a little on phones).
+        originX = arts[0].offsetLeft + V / 2;
+        originY = arts[0].offsetTop + V / 2;
+      }
+
+      const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+      let shown = 0, target = 0, current = -1, ticking = false, lastPower = null;
+
+      // ---------- Painting ----------
+      // Each level's picture is drawn onto its own screen-sized canvas, cropped to what's visible. Nothing large is
+      // ever scaled as a page layer, so the browser has no tiles to fill in mid-scroll and nothing flickers.
+      const DPR = Math.min(2, devicePixelRatio || 1);
+      const bitmaps = [];
+      const painted = pics.map(() => false);
+      function paint(k, opacity, x, y, size) {
+        const canvas = pics[k];
+        if (opacity <= 0) {
+          // Shrinking a hidden canvas to nothing frees its memory.
+          if (painted[k]) { canvas.width = 0; painted[k] = false; }
+          return;
+        }
+        const w = Math.round(innerWidth * DPR), h = Math.round(innerHeight * DPR);
+        if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+        const ctx = canvas.getContext("2d");
+        ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+        ctx.clearRect(0, 0, innerWidth, innerHeight);
+        painted[k] = true;
+        // Until its bitmap is ready a level falls back to the (slower) vector picture.
+        const source = bitmaps[k] || (pictures[k].complete ? pictures[k] : null);
+        if (!source) return;
+        const ratio = (bitmaps[k] ? bitmaps[k].width : 1000) / size;
+        const x0 = Math.max(0, x), y0 = Math.max(0, y);
+        const x1 = Math.min(innerWidth, x + size), y1 = Math.min(innerHeight, y + size);
+        if (x1 <= x0 || y1 <= y0) return;
+        ctx.globalAlpha = opacity;
+        ctx.drawImage(source, (x0 - x) * ratio, (y0 - y) * ratio, (x1 - x0) * ratio, (y1 - y0) * ratio, x0, y0, x1 - x0, y1 - y0);
+      }
+
+      // Animation layers fade in once a level is a third of the screen and out once it's twice the screen,
+      // so they're never scaled up into huge layers. [fade in from, to, fade out from, to], as a scale.
+      const FX_RANGE = [0.15, 0.3, 2, 3];
+      function fxFade(scale) {
+        const [a, b, c, d] = FX_RANGE;
+        if (scale <= a || scale >= d) return 0;
+        if (scale < b) return (scale - a) / (b - a);
+        if (scale > c) return (d - scale) / (d - c);
+        return 1;
+      }
+
+      // Only touch the DOM when a value actually changes.
+      const last = arts.map(() => ({ opacity: "", transform: "", frame: false }));
+      function setArt(k, opacity, transform) {
+        const style = arts[k].style, prev = last[k];
+        if (opacity !== prev.opacity) {
+          style.opacity = opacity;
+          // Only levels on screen run their animations.
+          arts[k].classList.toggle("live", Number(opacity) > 0);
+          prev.opacity = opacity;
+        }
+        if (transform && transform !== prev.transform) { style.transform = transform; prev.transform = transform; }
+      }
+      function setFrame(k, box) {
+        const rect = rects[k], label = rect.label, prev = last[k];
+        if (!box) {
+          if (prev.frame) { rect.style.display = label.style.display = "none"; prev.frame = false; }
+          return;
+        }
+        rect.setAttribute("x", box.x.toFixed(1));
+        rect.setAttribute("y", box.y.toFixed(1));
+        rect.setAttribute("width", box.size.toFixed(1));
+        rect.setAttribute("height", box.size.toFixed(1));
+        rect.style.opacity = box.opacity;
+        // Label above the frame while it's a sensible size to read and click; gone once it fills the view.
+        label.setAttribute("x", box.x.toFixed(1));
+        label.setAttribute("y", (box.y - 8).toFixed(1));
+        label.style.opacity = box.size > 50 && box.size < innerWidth * 0.5 ? box.opacity : 0;
+        if (!prev.frame) { rect.style.display = label.style.display = ""; prev.frame = true; }
+      }
+
+      function render(p) {
+        const j = Math.min(Math.floor(p), N - 2), t = p - j;
+        // Glide the camera from this level's centre to the next level's frame as we zoom.
+        const s = (1 - Math.pow(10, -t)) / 0.9;
+        const camX = centres[j][0] + (centres[j + 1][0] - centres[j][0]) * s;
+        const camY = centres[j][1] + (centres[j + 1][1] - centres[j][1]) * s;
+        const camW = Math.pow(10, -p);
+
+        arts.forEach((art, k) => {
+          if (p < k - 1.3 || p > k + 0.9) { paint(k, 0); setArt(k, "0"); setFrame(k, null); return; }
+          let opacity = 1;
+          if (p < k - 1) opacity = (p - (k - 1.3)) / 0.3;
+          if (p > k + 0.5) opacity = 1 - (p - (k + 0.5)) / 0.4;
+          opacity = clamp(opacity, 0, 1);
+          const dx = (centres[k][0] - camX) / camW * V;
+          const dy = (centres[k][1] - camY) / camW * V;
+          const scale = Math.pow(10, p - k);
+          const size = V * scale, x = originX + dx - size / 2, y = originY + dy - size / 2;
+          paint(k, opacity, x, y, size);
+          const fx = opacity * fxFade(scale);
+          setArt(k, fx.toFixed(3), fx > 0 ? `translate3d(${dx.toFixed(1)}px, ${dy.toFixed(1)}px, 0) scale(${scale.toFixed(5)})` : null);
+          // While a level is still smaller than the screen, outline it as the frame we're zooming into.
+          setFrame(k, k > 0 && scale < 1 ? { x, y, size, opacity: opacity.toFixed(3) } : null);
+        });
+
+        const nearest = clamp(Math.round(p), 0, N - 1);
+        if (nearest !== current) {
+          current = nearest;
+          levels.forEach((l, k) => l.classList.toggle("current", k === nearest));
+          railButtons.forEach((b, k) => b.classList.toggle("on", k === nearest));
+          stage.style.setProperty("--stage-bg", levels[nearest].dataset.bg);
+          document.getElementById("label").textContent = levels[nearest].dataset.label;
+          whenLine.textContent = levels[nearest].dataset.when;
+        }
+        if (twists.has("light")) {
+          const exponent = Number(levels[j].dataset.power) + (Number(levels[j + 1].dataset.power) - Number(levels[j].dataset.power)) * t;
+          const text = lightTime(Math.pow(10, exponent));
+          if (text !== lastLight) { lastLight = text; lightLine.textContent = text; }
+        }
+        const power = Math.round(Number(levels[j].dataset.power) + (Number(levels[j + 1].dataset.power) - Number(levels[j].dataset.power)) * t);
+        if (power !== lastPower) {
+          lastPower = power;
+          document.getElementById("now").innerHTML = `10<sup>${String(power).replace("-", "−")}</sup> m`;
+        }
+        hint.classList.toggle("gone", p > 0.15);
+      }
+
+      function tick() {
+        shown += (target - shown) * 0.16;
+        if (Math.abs(target - shown) < 0.0005) shown = target;
+        render(shown);
+        if (shown !== target) requestAnimationFrame(tick); else ticking = false;
+      }
+
+      function onScroll() {
+        target = clamp((scrollY - top) / STEP, 0, N - 1);
+        // Once the zoom has scrolled away, its readout and hint would sit on top of the summary and work sections.
+        root.classList.toggle("past-tour", scrollY > top + STEP * (N - 1) + innerHeight * 0.4);
+        if (!ticking) { ticking = true; requestAnimationFrame(tick); }
+      }
+
+      function jumpTo(k, instant) {
+        scrollTo({ top: top + k * STEP, behavior: instant ? "auto" : "smooth" });
+      }
+
+      document.addEventListener("click", (e) => {
+        const link = e.target.closest('a[href^="#"]');
+        if (!link) return;
+        const k = levels.findIndex((l) => `#${l.id}` === link.getAttribute("href"));
+        if (k < 0) return;
+        e.preventDefault();
+        history.replaceState(null, "", link.getAttribute("href"));
+        jumpTo(k);
+      });
+
+      addEventListener("scroll", onScroll, { passive: true });
+      // Typed or back/forward changes to #anchor zoom to that level too.
+      addEventListener("hashchange", () => {
+        const k = levels.findIndex((l) => `#${l.id}` === location.hash);
+        if (k >= 0) jumpTo(k);
+      });
+      addEventListener("resize", () => { layout(); onScroll(); });
+
+      // ---------- Flatten pictures ----------
+      // Thousands of vector shapes are slow to draw. Each picture is drawn once into a bitmap, with its soft square
+      // edges baked in, and paint() only ever copies from that.
+      async function flatten(k, size) {
+        const img = pictures[k];
+        await img.decode();
+        const canvas = document.createElement("canvas");
+        canvas.width = canvas.height = size;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, size, size);
+        // Fade the edges horizontally, then vertically, so a level blends into the frame it sits in.
+        ctx.globalCompositeOperation = "destination-in";
+        for (const [x1, y1] of [[size, 0], [0, size]]) {
+          const edge = ctx.createLinearGradient(0, 0, x1, y1);
+          edge.addColorStop(0, "transparent");
+          edge.addColorStop(.04, "#000");
+          edge.addColorStop(.96, "#000");
+          edge.addColorStop(1, "transparent");
+          ctx.fillStyle = edge;
+          ctx.fillRect(0, 0, size, size);
+        }
+        bitmaps[k] = await createImageBitmap(canvas);
+        if (!ticking) render(shown);
+      }
+      async function flattenAll() {
+        // A little sharper than the screen, so a level still looks crisp while it grows past full size.
+        const size = Math.min(2048, Math.round(V * DPR * 1.5));
+        // Levels nearest the visitor first.
+        const order = pictures.map((_, k) => k).sort((a, b) => Math.abs(a - shown) - Math.abs(b - shown));
+        for (const k of order) {
+          try { await flatten(k, size); } catch { /* keep drawing the vector version */ }
+        }
+      }
+
+      // The page, not the browser, decides where a #link lands: every level sits at the top of the pinned stage, so
+      // the browser's own jump to an anchor (or restoring an old scroll position) would land in the wrong place.
+      history.scrollRestoration = "manual";
+      const start = levels.findIndex((l) => `#${l.id}` === location.hash);
+      function land() {
+        if (start > 0) jumpTo(start, true);
+        onScroll();
+        shown = target;
+        render(shown);
+      }
+      layout();
+      land();
+      addEventListener("load", land, { once: true });
+      flattenAll();
     })();
   </script>
 </body>
